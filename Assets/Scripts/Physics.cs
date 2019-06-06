@@ -6,25 +6,25 @@ public class Physics : MonoBehaviour
 {
     public float forceThrust, maxVelocity = 6, rotationSpeed;
     public Rigidbody2D planeBody;
-    public Quaternion currentRotation, fallingRotation;
+    public float smoothTime, smooth, convertedTime = 200;
+    public Vector3 initialRotation;
 
     // Start is called before the first frame update
     void Start()
     {
         forceThrust = 50;
         rotationSpeed = 7;
-        //fallingRotation = new Quaternion(0, 0, -0.5f, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //currentRotation = new Quaternion(planeBody.transform.rotation.x, planeBody.transform.rotation.y, planeBody.transform.rotation.z, 0) ;
-        //if(Input.GetKeyUp(KeyCode.W))
-        //{
-        //    planeBody.gravityScale = 3;
-        //    planeBody.MoveRotation(-90);
-        //}
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+            planeBody.gravityScale = 3;
+            smooth = Time.deltaTime * smoothTime * convertedTime;
+            planeBody.AddTorque(planeBody.rotation * smooth);
+        }
     }
 
     private void FixedUpdate()
