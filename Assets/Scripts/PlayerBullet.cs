@@ -7,6 +7,6 @@ public class PlayerBullet : MonoBehaviour
     public float speed;
     private void Start()
     {
-        GetComponent<Rigidbody>().velocity = transform.forward * speed;
+        GetComponent<Rigidbody>().velocity = transform.right * speed;
     }
 }

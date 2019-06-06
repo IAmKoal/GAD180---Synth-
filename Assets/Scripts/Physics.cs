@@ -8,6 +8,13 @@ public class Physics : MonoBehaviour
     public Rigidbody2D planeBody;
     public Quaternion currentRotation, fallingRotation;
 
+    public GameObject Shot;
+    public Transform BulletSpawn;
+    public float fireRate;
+
+    private float nextFire;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +32,12 @@ public class Physics : MonoBehaviour
         //    planeBody.gravityScale = 3;
         //    planeBody.MoveRotation(-90);
         //}
+
+        if(Input.GetKey(KeyCode.Space) && Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+            Instantiate(Shot, BulletSpawn.position, BulletSpawn.rotation);
+        }
     }
 
     private void FixedUpdate()
