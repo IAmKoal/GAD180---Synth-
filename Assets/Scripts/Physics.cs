@@ -4,16 +4,14 @@ using UnityEngine;
 
 public class Physics : MonoBehaviour
 {
-    public float forceThrust, maxVelocity = 6, rotationSpeed;
+    public float forceThrust, maxVelocity = 8, rotationSpeed;
     public Rigidbody2D planeBody;
-    public float smoothTime, smooth, convertedTime = 200;
-    public Vector3 initialRotation;
 
     // Start is called before the first frame update
     void Start()
     {
         forceThrust = 50;
-        rotationSpeed = 7;
+        rotationSpeed = 10;
     }
 
     // Update is called once per frame
@@ -21,9 +19,11 @@ public class Physics : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.W))
         {
-            planeBody.gravityScale = 3;
-            smooth = Time.deltaTime * smoothTime * convertedTime;
-            planeBody.AddTorque(planeBody.rotation * smooth);
+            planeBody.gravityScale = Mathf.Lerp(0.25f, 3, 3f);
+        }
+        if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.A))
+        {
+            planeBody.angularDrag = 10;
         }
     }
 
@@ -33,15 +33,18 @@ public class Physics : MonoBehaviour
         {
             planeBody.AddForce(transform.right * forceThrust);
             planeBody.gravityScale = 0.25f;
+            Debug.Log(planeBody.velocity.magnitude);
         }
 
         if(Input.GetKey(KeyCode.D))
         {
+            planeBody.angularDrag = 2;
             planeBody.AddTorque(-rotationSpeed);
         }
 
         if (Input.GetKey(KeyCode.A))
         {
+            planeBody.angularDrag = 2;
             planeBody.AddTorque(rotationSpeed);
         }
     }
