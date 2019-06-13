@@ -6,6 +6,7 @@ public class Physics : MonoBehaviour
 {
     public float forceThrust, maxVelocity = 8, rotationSpeed;
     public Rigidbody2D planeBody;
+    public Animator planeAnimation;
 
     // Start is called before the first frame update
     void Start()
@@ -38,13 +39,13 @@ public class Physics : MonoBehaviour
 
         if(Input.GetKey(KeyCode.D))
         {
-            planeBody.angularDrag = 2;
+            planeBody.angularDrag = 20;
             planeBody.AddTorque(-rotationSpeed);
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            planeBody.angularDrag = 2;
+            planeBody.angularDrag = 20;
             planeBody.AddTorque(rotationSpeed);
         }
     }
