@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Physics : MonoBehaviour
+public class FlightPhysics : MonoBehaviour
 {
     public float forceThrust, maxVelocity = 6, rotationSpeed;
     public Rigidbody2D planeBody;
@@ -12,7 +12,6 @@ public class Physics : MonoBehaviour
     public GameObject Shot;
     public Transform BulletSpawn;
     public float fireRate;
-
     private float nextFire;
 
 
