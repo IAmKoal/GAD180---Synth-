@@ -8,7 +8,6 @@ public class FlightPhysics : MonoBehaviour
     public Rigidbody2D planeBody;
     public Quaternion currentRotation, fallingRotation;
 
-    public int health;
     public GameObject Shot;
     public Transform BulletSpawn;
     public float fireRate;

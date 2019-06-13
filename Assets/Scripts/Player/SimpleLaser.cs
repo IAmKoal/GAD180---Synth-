@@ -4,27 +4,30 @@ using UnityEngine;
 
 public class SimpleLaser : MonoBehaviour
 {
-    public GameObject firepoint;
-    public LineRenderer Lr;
-    public float maximumLength;
-    public GameObject player;
+    public Transform laser;
 
-
-    private void Update()
+    private void Start()
     {
-        Lr.SetPosition(0, firepoint.transform.position);
-        RaycastHit hit;
+        Transform laser = gameObject.transform;
+       
+    }
 
-        if (Physics.Raycast (firepoint.transform.position, firepoint.transform.position, out hit, maximumLength))
+    public void Update()
+    {
+        if (Input.GetKey(KeyCode.Q))
         {
-            if(hit.collider)
-            {
-                Lr.SetPosition(1, hit.point);
-            }
+            laser.localScale = new Vector3(10f, 0.15f);
         }
-        else
+        else laser.localScale = new Vector3 (0f, 0f);
+     
+    }
+
+    private void OnTriggerEnter(Collider laserCol)
+    {
+        if (laserCol.gameObject.tag == "Enemy")
         {
-            Lr.SetPosition(1, player.transform.position);
+            Debug.Log("collision detected");
         }
     }
+
 }
