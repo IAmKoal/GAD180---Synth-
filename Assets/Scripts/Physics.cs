@@ -6,7 +6,6 @@ public class Physics : MonoBehaviour
 {
     public float forceThrust, maxVelocity = 8, rotationSpeed;
     public Rigidbody2D planeBody;
-    public Animator planeAnimation;
 
     // Start is called before the first frame update
     void Start()
