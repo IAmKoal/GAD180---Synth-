@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Camera : MonoBehaviour
+public class CameraBehaviour : MonoBehaviour
 {
-    public Transform target;
+   public Transform target;
     public float smoothTime = 0.2f;
     private Vector3 velocity = Vector3.zero;
 
