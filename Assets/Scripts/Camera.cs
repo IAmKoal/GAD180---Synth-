@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraBehaviour : MonoBehaviour
+public class Camera : MonoBehaviour
 {
    public Transform target;
     public float smoothTime = 0.2f;
