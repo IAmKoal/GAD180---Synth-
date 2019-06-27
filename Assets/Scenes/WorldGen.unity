@@ -4572,7 +4572,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f21c895cc020346877f83c8894534a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1400551465}
+  target: {fileID: 0}
+  smoothTime: 0.2
 --- !u!1 &1235652091
 GameObject:
   m_ObjectHideFlags: 0
@@ -5064,6 +5065,11 @@ MonoBehaviour:
   maxVelocity: 8
   rotationSpeed: 0
   planeBody: {fileID: 1400551466}
+  currentRotation: {x: 0, y: 0, z: 0, w: 0}
+  fallingRotation: {x: 0, y: 0, z: 0, w: 0}
+  Shot: {fileID: 2263597513152788043, guid: 5a1096e3e33583f43bccea07b5db3da4, type: 3}
+  BulletSpawn: {fileID: 122518740}
+  fireRate: 0
 --- !u!212 &1400551468
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6163,6 +6169,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1097862266}
     m_Modifications:
+    - target: {fileID: 2263597513152788040, guid: 5a1096e3e33583f43bccea07b5db3da4,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2263597513152788042, guid: 5a1096e3e33583f43bccea07b5db3da4,
+        type: 3}
+      propertyPath: portalStat
+      value: 
+      objectReference: {fileID: 1820084343}
+    - target: {fileID: 2263597513152788042, guid: 5a1096e3e33583f43bccea07b5db3da4,
+        type: 3}
+      propertyPath: playerPos
+      value: 
+      objectReference: {fileID: 1400551469}
     - target: {fileID: 2263597513152788043, guid: 5a1096e3e33583f43bccea07b5db3da4,
         type: 3}
       propertyPath: m_Name
@@ -6237,21 +6258,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 396.31308
-      objectReference: {fileID: 0}
-    - target: {fileID: 2263597513152788042, guid: 5a1096e3e33583f43bccea07b5db3da4,
-        type: 3}
-      propertyPath: portalStat
-      value: 
-      objectReference: {fileID: 1820084343}
-    - target: {fileID: 2263597513152788042, guid: 5a1096e3e33583f43bccea07b5db3da4,
-        type: 3}
-      propertyPath: playerPos
-      value: 
-      objectReference: {fileID: 1400551469}
-    - target: {fileID: 2263597513152788040, guid: 5a1096e3e33583f43bccea07b5db3da4,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a1096e3e33583f43bccea07b5db3da4, type: 3}
