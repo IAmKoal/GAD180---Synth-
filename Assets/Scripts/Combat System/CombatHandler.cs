@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CombatHandler : MonoBehaviour
 {
-    PlayerStats player;
+    //PlayerStats player;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +18,7 @@ public class CombatHandler : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D enemyBulCol)
+    /*private void OnTriggerEnter2D(Collider2D enemyBulCol)
     {
 
         Debug.Log("Hit Bullet");
@@ -29,8 +29,8 @@ public class CombatHandler : MonoBehaviour
 
         }
     }
-
-    private void OnTriggerEnter2DPlayer(Collider2D playerBulCol)
+    */
+    /*private void OnTriggerEnter2DPlayer(Collider2D playerBulCol)
     {
         Debug.Log("Enemy Hit");
         if(playerBulCol.gameObject.GetComponent<PlayerBullet>().tag == "Enemy")
@@ -39,4 +39,5 @@ public class CombatHandler : MonoBehaviour
             
         }
     }
+    */
 }

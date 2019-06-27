@@ -21,5 +21,15 @@ public class PlayerStats : MonoBehaviour
     {
        
     }
+    private void OnTriggerEnter2D(Collider2D enemyBulCol)
+    {
 
+        Debug.Log("Hit Bullet");
+        if (enemyBulCol.gameObject.tag == "Enemy Bullet")
+        {
+            int enemyBulDamage = enemyBulCol.gameObject.GetComponent<EnemyBullet>().enemyDamage;
+            playerCurrentHealth -= enemyBulDamage;
+
+        }
+    }
 }
