@@ -20,12 +20,18 @@ public class PlayerStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
 
-    public void TakeDamage (int dmg)
+    private void OnTriggerEnter2D(Collider2D enemyBulCol)
     {
-        playerCurrentHealth -= dmg;
 
+        Debug.Log("Hit Bullet");
+        if (enemyBulCol.gameObject.tag == "Enemy Bullet")
+        {
+            int damage = enemyBulCol.gameObject.GetComponent<EnemyBullet>().enemyDamage;
+            playerCurrentHealth -= damage;
+            
+        }
     }
 }
