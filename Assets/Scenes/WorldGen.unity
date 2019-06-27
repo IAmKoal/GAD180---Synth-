@@ -1392,7 +1392,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 352218894}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DesertSpawns
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2222,7 +2222,7 @@ GameObject:
   - component: {fileID: 533452765}
   - component: {fileID: 533452764}
   - component: {fileID: 533452766}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Desert (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2328,7 +2328,7 @@ GameObject:
   - component: {fileID: 554346560}
   - component: {fileID: 554346559}
   - component: {fileID: 554346561}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CityGround (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2513,7 +2513,7 @@ GameObject:
   - component: {fileID: 605632935}
   - component: {fileID: 605632934}
   - component: {fileID: 605632936}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CityGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2698,7 +2698,7 @@ GameObject:
   - component: {fileID: 694398259}
   - component: {fileID: 694398258}
   - component: {fileID: 694398260}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4569,11 +4569,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1232517765}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33f21c895cc020346877f83c8894534a, type: 3}
+  m_Script: {fileID: 11500000, guid: 10f67fcf04aa8e04f8c9c53d57b98a3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  smoothTime: 0.2
+  player: {fileID: 1400551465}
 --- !u!1 &1235652091
 GameObject:
   m_ObjectHideFlags: 0
@@ -5016,14 +5015,14 @@ GameObject:
   - component: {fileID: 1400551469}
   - component: {fileID: 1400551468}
   - component: {fileID: 1400551473}
-  - component: {fileID: 1400551467}
   - component: {fileID: 1400551466}
   - component: {fileID: 1400551471}
   - component: {fileID: 1400551470}
   - component: {fileID: 1400551472}
+  - component: {fileID: 1400551467}
   m_Layer: 0
-  m_Name: PropellorStall
-  m_TagString: Untagged
+  m_Name: Player
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5058,18 +5057,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1400551465}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efe65567755c49e4da9b8e42d9bcf01f, type: 3}
+  m_Script: {fileID: 11500000, guid: 471b691841e97fe40bc1a9c081a6d719, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   forceThrust: 0
   maxVelocity: 8
   rotationSpeed: 0
   planeBody: {fileID: 1400551466}
-  currentRotation: {x: 0, y: 0, z: 0, w: 0}
-  fallingRotation: {x: 0, y: 0, z: 0, w: 0}
-  Shot: {fileID: 2263597513152788043, guid: 5a1096e3e33583f43bccea07b5db3da4, type: 3}
+  Shot: {fileID: 250150125960704233, guid: 8707e10dc892bd747a35872480368ddb, type: 3}
   BulletSpawn: {fileID: 122518740}
-  fireRate: 0
+  fireRate: 0.1
 --- !u!212 &1400551468
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5207,7 +5204,7 @@ MonoBehaviour:
   laserPoint: {fileID: 122518740}
   layerMask:
     serializedVersion: 2
-    m_Bits: 310
+    m_Bits: 822
 --- !u!1 &1433612506
 GameObject:
   m_ObjectHideFlags: 0
@@ -6169,21 +6166,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1097862266}
     m_Modifications:
-    - target: {fileID: 2263597513152788040, guid: 5a1096e3e33583f43bccea07b5db3da4,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 2263597513152788042, guid: 5a1096e3e33583f43bccea07b5db3da4,
-        type: 3}
-      propertyPath: portalStat
-      value: 
-      objectReference: {fileID: 1820084343}
-    - target: {fileID: 2263597513152788042, guid: 5a1096e3e33583f43bccea07b5db3da4,
-        type: 3}
-      propertyPath: playerPos
-      value: 
-      objectReference: {fileID: 1400551469}
     - target: {fileID: 2263597513152788043, guid: 5a1096e3e33583f43bccea07b5db3da4,
         type: 3}
       propertyPath: m_Name
@@ -6259,6 +6241,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 396.31308
       objectReference: {fileID: 0}
+    - target: {fileID: 2263597513152788040, guid: 5a1096e3e33583f43bccea07b5db3da4,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2263597513152788042, guid: 5a1096e3e33583f43bccea07b5db3da4,
+        type: 3}
+      propertyPath: portalStat
+      value: 
+      objectReference: {fileID: 1820084343}
+    - target: {fileID: 2263597513152788042, guid: 5a1096e3e33583f43bccea07b5db3da4,
+        type: 3}
+      propertyPath: playerPos
+      value: 
+      objectReference: {fileID: 1400551469}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a1096e3e33583f43bccea07b5db3da4, type: 3}
 --- !u!1 &1811630927
@@ -6477,7 +6474,7 @@ GameObject:
   - component: {fileID: 1838840166}
   - component: {fileID: 1838840165}
   - component: {fileID: 1838840167}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Grass (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6662,7 +6659,7 @@ GameObject:
   - component: {fileID: 1872009532}
   - component: {fileID: 1872009531}
   - component: {fileID: 1872009533}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Desert
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7104,7 +7101,7 @@ GameObject:
   - component: {fileID: 1985600994}
   - component: {fileID: 1985600993}
   - component: {fileID: 1985600995}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CityGround (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7386,7 +7383,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2049920130}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GrassSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}

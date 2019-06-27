@@ -25,12 +25,6 @@ public class FlightPhysics : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //currentRotation = new Quaternion(planeBody.transform.rotation.x, planeBody.transform.rotation.y, planeBody.transform.rotation.z, 0) ;
-        //if(Input.GetKeyUp(KeyCode.W))
-        //{
-        //    planeBody.gravityScale = 3;
-        //    planeBody.MoveRotation(-90);
-        //}
 
         if(Input.GetKey(KeyCode.Space) && Time.time > nextFire)
         {

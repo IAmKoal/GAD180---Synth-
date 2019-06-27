@@ -7,6 +7,11 @@ public class Physics : MonoBehaviour
     public float forceThrust, maxVelocity = 8, rotationSpeed;
     public Rigidbody2D planeBody;
 
+    public GameObject Shot;
+    public Transform BulletSpawn;
+    public float fireRate;
+    private float nextFire;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +29,11 @@ public class Physics : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.A))
         {
             planeBody.angularDrag = 10;
+        }
+        if (Input.GetKey(KeyCode.Space) && Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+            Instantiate(Shot, BulletSpawn.position, BulletSpawn.rotation);
         }
     }
 
