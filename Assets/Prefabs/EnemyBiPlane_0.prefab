@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 8b356cca884e66b4aacacbff72db4731, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -119,7 +119,7 @@ MonoBehaviour:
   EnemyShot: {fileID: 250150125960704233, guid: 8707e10dc892bd747a35872480368ddb,
     type: 3}
   EnemyBulletSpawn: {fileID: 8498127394605015415}
-  fireRate: 0.2
+  fireRate: 0.4
 --- !u!114 &8306532648838730766
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PortalScript : MonoBehaviour
 {
-    private float spawnAmounts = 5;
+    private float spawnAmounts = 3;
     public GameObject[] enemySpawns;
     public bool spawnSomething;
     private IEnumerator coroutine;
@@ -20,7 +20,7 @@ public class PortalScript : MonoBehaviour
     {
         if (spawnAmounts > 0 && spawnSomething == true)
         {
-            coroutine = WaitSpawn(1);
+            coroutine = WaitSpawn(1.5f);
             StartCoroutine(coroutine);
             Instantiate(enemySpawns[Random.Range(0, enemySpawns.Length)], gameObject.transform.position, Quaternion.identity);
         }

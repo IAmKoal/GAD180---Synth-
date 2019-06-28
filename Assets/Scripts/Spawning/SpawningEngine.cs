@@ -21,7 +21,7 @@ public class SpawningEngine : MonoBehaviour
     {
         spawnLocations.x = (Random.Range(5, 85));
         spawnLocations.y = (Random.Range(-2, 35));
-        spawnLocations.z = -1;
+        spawnLocations.z = -3;
         CreateSpawnPoint();
     }
 
@@ -29,10 +29,10 @@ public class SpawningEngine : MonoBehaviour
     {
         if(spawnCD <= 0)
         {
-            GameObject newPortal;
-            newPortal = Instantiate(enemyPrefab[Random.Range(0, enemyPrefab.Length)], spawnLocations, Quaternion.identity);
+            GameObject newPortal = Instantiate(enemyPrefab[Random.Range(0, enemyPrefab.Length)], spawnLocations, Quaternion.identity);
             curPortal = newPortal;
             spawnCD = 2.5f;
+            Debug.Log(curPortal.gameObject.transform.position);
         }
         else
         {
