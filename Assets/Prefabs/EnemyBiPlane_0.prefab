@@ -120,6 +120,10 @@ MonoBehaviour:
     type: 3}
   EnemyBulletSpawn: {fileID: 8498127394605015415}
   fireRate: 0.4
+  EnemyMissile: {fileID: 6047119517711218684, guid: 08314ff486e3de643b8317ec8d6c9bb2,
+    type: 3}
+  EnemyMissileSpawn: {fileID: 8498127394605015415}
+  missileCooldownTime: 5
 --- !u!114 &8306532648838730766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,7 +185,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8498127394605015415}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: EnemyProjectileSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
