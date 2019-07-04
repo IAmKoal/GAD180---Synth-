@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fb0ac6844f378e4cafcac6068162d11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyShot: {fileID: 250150125960704233, guid: 8707e10dc892bd747a35872480368ddb,
+  EnemyShot: {fileID: 5523480817955835905, guid: 6d12d9c36cdf9074a86570f5a5e069de,
     type: 3}
   EnemyBulletSpawn: {fileID: 8498127394605015415}
   fireRate: 0.4
@@ -138,6 +138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 100
   enemyCurrentHealth: 0
+  scene: {fileID: 0}
 --- !u!114 &8365811658466682257
 MonoBehaviour:
   m_ObjectHideFlags: 0
