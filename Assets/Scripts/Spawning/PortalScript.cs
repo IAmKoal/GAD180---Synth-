@@ -6,6 +6,7 @@ public class PortalScript : MonoBehaviour
 {
     private float spawnAmounts = 3;
     public GameObject[] enemySpawns;
+    public SpawningEngine spawningEngine;
     public bool spawnSomething;
     private IEnumerator coroutine;
 
@@ -13,6 +14,7 @@ public class PortalScript : MonoBehaviour
     private void Start()
     {
         spawnSomething = true;
+        spawningEngine = GameObject.Find("PortalManager").GetComponent<SpawningEngine>();
         SpawnThemAll();
     }
 
@@ -22,7 +24,8 @@ public class PortalScript : MonoBehaviour
         {
             coroutine = WaitSpawn(1.5f);
             StartCoroutine(coroutine);
-            Instantiate(enemySpawns[Random.Range(0, enemySpawns.Length)], gameObject.transform.position, Quaternion.identity);
+            GameObject enemy = Instantiate(enemySpawns[Random.Range(0, enemySpawns.Length - 1)], gameObject.transform.position, Quaternion.identity);
+            spawningEngine.enemyAmt.Add(enemy);
         }
         else if(spawnAmounts == 0)
         {
@@ -32,10 +35,10 @@ public class PortalScript : MonoBehaviour
     
     private IEnumerator WaitSpawn(float time)
     {
-        spawnSomething = false;
-        spawnAmounts -= 1;
-        yield return new WaitForSeconds(time);
-        spawnSomething = true;
-        SpawnThemAll();
+            spawnSomething = false;
+            spawnAmounts -= 1;
+            yield return new WaitForSeconds(time);
+            spawnSomething = true;
+            SpawnThemAll();
     }
 }

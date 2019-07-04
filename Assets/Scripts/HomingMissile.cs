@@ -14,7 +14,7 @@ public class HomingMissile : MonoBehaviour
     //GameCamera explosionEffect;
 
     [SerializeField]
-    float thrust = 1;
+    float thrust = 10;
 
     [SerializeField]
     float rotateSpeed = 200f;
@@ -27,22 +27,16 @@ public class HomingMissile : MonoBehaviour
         playerTarget = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void FixedUpdate()
     {
 
         Vector2 direction = (Vector2)playerTarget.position - rb.position;
         direction.Normalize();
-        float rotateAmount = Vector3.Cross(direction, transform.forward).z;
+        float rotateAmount = Vector3.Cross(direction, transform.up).z;
         rb.angularVelocity = -rotateAmount * rotateSpeed;
-        rb.velocity = transform.forward * thrust;
+        //rb.velocity = transform.up * thrust;
 
-       // rb.AddRelativeForce(Vector3.forward * thrust);
+        rb.AddRelativeForce(Vector3.up * thrust);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

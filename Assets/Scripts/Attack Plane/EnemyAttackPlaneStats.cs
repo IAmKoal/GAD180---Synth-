@@ -6,6 +6,8 @@ public class EnemyAttackPlaneStats : MonoBehaviour
 {
     public int enemyMaxHealth = 100;
     public int enemyCurrentHealth;
+    public SceneStuff scene;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +19,7 @@ public class EnemyAttackPlaneStats : MonoBehaviour
     {
         if(enemyCurrentHealth <= 0)
         {
+
             Destroy(gameObject);
         }
     }
