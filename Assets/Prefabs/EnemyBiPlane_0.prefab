@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8306532648838730766}
   - component: {fileID: 8365811658466682257}
   - component: {fileID: 7590906903238449026}
+  - component: {fileID: 5821401412507137309}
   m_Layer: 0
   m_Name: EnemyBiPlane_0
   m_TagString: Untagged
@@ -175,6 +176,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &5821401412507137309
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7316582393257836620}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.01966095, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.15, y: 1.6107812}
+    newSize: {x: 5.11, y: 1.6}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.451523, y: 1.8729706}
+  m_EdgeRadius: 0
 --- !u!1 &7670950970167258475
 GameObject:
   m_ObjectHideFlags: 0
