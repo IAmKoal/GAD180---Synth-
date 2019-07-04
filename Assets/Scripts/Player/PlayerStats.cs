@@ -19,7 +19,7 @@ public class PlayerStats : MonoBehaviour
     void Start()
     {
         sceneStuff = GameObject.Find("SceneManager").GetComponent<SceneStuff>();
-        playerCurrentHealth = playerMaxHealth;   
+        playerCurrentHealth = playerMaxHealth;  
     }
 
     // Update is called once per frame
@@ -39,7 +39,6 @@ public class PlayerStats : MonoBehaviour
         {
             int enemyBulDamage = enemyBulCol.gameObject.GetComponent<EnemyBullet>().enemyDamage;
             playerCurrentHealth -= enemyBulDamage;
-
         }
     }
 

@@ -116,7 +116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 30
   timeAlive: 0
-  playerBulDamage: 100
+  playerBulDamage: 25
 --- !u!50 &8107821067291067642
 Rigidbody2D:
   serializedVersion: 4
