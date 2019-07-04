@@ -12,6 +12,6 @@ public class EndScript : MonoBehaviour
 
     public void exittosurvey()
     {
-        Application.OpenURL("https://docs.google.com/document/d/1SyO7DjQJscdXMUsuRROa0wt-U3ad5mETM2DFsP9pTvk/edit?usp=sharing");
+        Application.OpenURL("https://docs.google.com/forms/d/e/1FAIpQLSc893lsZKRh8H-2YyBl92bI4i0E2UiZ8-HpUzf0hVQVwIRyUw/viewform?usp=sf_link");
     }
 }
