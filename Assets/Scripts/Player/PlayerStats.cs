@@ -48,7 +48,7 @@ public class PlayerStats : MonoBehaviour
     {
         if (playerCurrentHealth <= 0)
         {
-            SceneManager.LoadSceneAsync("WorldGen");
+            SceneManager.LoadSceneAsync("End");
         }
     }
 }

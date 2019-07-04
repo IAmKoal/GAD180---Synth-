@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Bounds
   - Enemy Missile
+  - Player Bullet
+  - Enemy Bullet
+  - Enemy Bi Plane
   layers:
   - Default
   - TransparentFX

@@ -2567,6 +2567,7 @@ GameObject:
   - component: {fileID: 1400551470}
   - component: {fileID: 1400551472}
   - component: {fileID: 1400551467}
+  - component: {fileID: 1400551474}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2752,6 +2753,24 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 822
+--- !u!114 &1400551474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400551465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abb8f8059a1b22949a06ea3c7049c31c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMaxHealth: 100
+  playerCurrentHealth: 0
+  playerShield: 0
+  Shot: {fileID: 250150125960704233, guid: 8707e10dc892bd747a35872480368ddb, type: 3}
+  BulletSpawn: {fileID: 122518740}
+  fireRate: 0.2
 --- !u!1 &1454933580
 GameObject:
   m_ObjectHideFlags: 0
