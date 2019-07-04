@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Rigidbody2D))]
 public class HomingMissile : MonoBehaviour
 {
 
@@ -21,10 +21,10 @@ public class HomingMissile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //playerTarget = GameObject.FindGameObjectWithTag("Player").transform;
 
         rb = GetComponent<Rigidbody2D>();
 
+        playerTarget = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     // Update is called once per frame
@@ -42,7 +42,7 @@ public class HomingMissile : MonoBehaviour
         rb.angularVelocity = -rotateAmount * rotateSpeed;
         rb.velocity = transform.forward * thrust;
 
-        rb.AddRelativeForce(Vector3.forward * thrust);
+       // rb.AddRelativeForce(Vector3.forward * thrust);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

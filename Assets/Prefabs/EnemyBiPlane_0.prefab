@@ -120,7 +120,7 @@ MonoBehaviour:
     type: 3}
   EnemyBulletSpawn: {fileID: 8498127394605015415}
   fireRate: 0.4
-  EnemyMissile: {fileID: 6047119517711218684, guid: 08314ff486e3de643b8317ec8d6c9bb2,
+  EnemyMissile: {fileID: 6961664773510222625, guid: f1adb81704fc33d47926403beef42ef2,
     type: 3}
   EnemyMissileSpawn: {fileID: 8498127394605015415}
   missileCooldownTime: 5

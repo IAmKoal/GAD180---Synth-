@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -28,6 +29,8 @@ public class PlayerStats : MonoBehaviour
             nextFire = Time.time + fireRate;
             Instantiate(Shot, BulletSpawn.position, BulletSpawn.rotation);
         }
+
+        Death();
     }
     private void OnTriggerEnter2D(Collider2D enemyBulCol)
     {
@@ -38,6 +41,14 @@ public class PlayerStats : MonoBehaviour
             int enemyBulDamage = enemyBulCol.gameObject.GetComponent<EnemyBullet>().enemyDamage;
             playerCurrentHealth -= enemyBulDamage;
 
+        }
+    }
+
+    public void Death()
+    {
+        if (playerCurrentHealth <= 0)
+        {
+            SceneManager.LoadSceneAsync("WorldGen");
         }
     }
 }

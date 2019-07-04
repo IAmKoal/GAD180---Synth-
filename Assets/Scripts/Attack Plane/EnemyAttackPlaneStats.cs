@@ -15,7 +15,10 @@ public class EnemyAttackPlaneStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(enemyCurrentHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D playerBulCol)
