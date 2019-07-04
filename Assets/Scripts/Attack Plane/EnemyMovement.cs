@@ -36,6 +36,7 @@ public class EnemyMovement : MonoBehaviour
         if ( Time.time > missileNextFireTime)
         {
             Instantiate(EnemyMissile, EnemyMissileSpawn.position, EnemyMissileSpawn.rotation);
+            Debug.Log("Missile Spawned");
             missileNextFireTime = Time.time + missileCooldownTime;
         }
 

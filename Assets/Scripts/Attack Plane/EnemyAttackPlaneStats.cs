@@ -18,18 +18,19 @@ public class EnemyAttackPlaneStats : MonoBehaviour
         if(enemyCurrentHealth <= 0)
         {
             Destroy(gameObject);
+            Debug.Log("Enemy Destroyed");
         }
     }
 
     private void OnTriggerEnter2D(Collider2D playerBulCol)
     {
 
-        Debug.Log("Enemy Hit By Player Bullet");
+        
         if (playerBulCol.gameObject.tag == "Player Bullet")
         {
             int playerBulDamage = playerBulCol.gameObject.GetComponent<PlayerBullet>().playerBulDamage;
             enemyCurrentHealth -= playerBulDamage;
-
+            Debug.Log("Enemy Hit By Player Bullet");
         }
     }
 }
