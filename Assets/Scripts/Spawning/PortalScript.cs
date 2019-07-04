@@ -25,7 +25,7 @@ public class PortalScript : MonoBehaviour
             coroutine = WaitSpawn(1.5f);
             StartCoroutine(coroutine);
             GameObject enemy = Instantiate(enemySpawns[Random.Range(0, enemySpawns.Length - 1)], gameObject.transform.position, Quaternion.identity);
-            spawningEngine.enemyAmt.Add(enemy);
+            spawningEngine.enemyAmt += 1;
         }
         else if(spawnAmounts == 0)
         {

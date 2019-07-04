@@ -9,7 +9,7 @@ public class PlayerStats : MonoBehaviour
     public int playerMaxHealth = 100;
     public int playerCurrentHealth;
     public int playerShield;
-
+    public SceneStuff sceneStuff;
     public GameObject Shot;
     public Transform BulletSpawn;
     public float fireRate;
@@ -18,6 +18,7 @@ public class PlayerStats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        sceneStuff = GameObject.Find("SceneManager").GetComponent<SceneStuff>();
         playerCurrentHealth = playerMaxHealth;   
     }
 
@@ -34,8 +35,6 @@ public class PlayerStats : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D enemyBulCol)
     {
-
-        Debug.Log("Hit Bullet");
         if (enemyBulCol.gameObject.tag == "Enemy Bullet")
         {
             int enemyBulDamage = enemyBulCol.gameObject.GetComponent<EnemyBullet>().enemyDamage;
@@ -48,7 +47,7 @@ public class PlayerStats : MonoBehaviour
     {
         if (playerCurrentHealth <= 0)
         {
-            SceneManager.LoadSceneAsync("End");
+            sceneStuff.playerAlive = false;
         }
     }
 }

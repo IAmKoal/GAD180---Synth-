@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 4736349755871494388}
   - component: {fileID: 5525894897663184045}
   - component: {fileID: 6908506921386144862}
-  - component: {fileID: 8635662541457329215}
   - component: {fileID: 3732114725008430238}
   - component: {fileID: 3624564729535664589}
+  - component: {fileID: -8347835428114566687}
   m_Layer: 0
   m_Name: Enemy Bullet
-  m_TagString: Untagged
+  m_TagString: Enemy Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,21 +102,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8635662541457329215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5523480817955835905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4c42f677ff53fd49a34da2d4449f390, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 30
-  timeAlive: 0
-  playerBulDamage: 10
 --- !u!50 &3732114725008430238
 Rigidbody2D:
   serializedVersion: 4
@@ -132,7 +117,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -154,3 +139,17 @@ CircleCollider2D:
   m_Offset: {x: 0.03370045, y: -0.0020020008}
   serializedVersion: 2
   m_Radius: 0.04
+--- !u!114 &-8347835428114566687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5523480817955835905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 601718b652e7f19408d26fc8d6f6f714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
+  enemyDamage: 5

@@ -8,7 +8,7 @@ public class SpawningEngine : MonoBehaviour
     private Vector3 spawnLocations;
     public float spawnCD;
     public GameObject[] enemyPrefab;
-    public List<GameObject> enemyAmt = new List<GameObject>();
+    public float enemyAmt;
     public GameObject curPortal;
 
     // Start is called before the first frame update
@@ -23,7 +23,7 @@ public class SpawningEngine : MonoBehaviour
         spawnLocations.x = (Random.Range(5, 85));
         spawnLocations.y = (Random.Range(-2, 35));
         spawnLocations.z = -3;
-        if (enemyAmt.Count <= 9)
+        if (enemyAmt <= 9)
         {
             CreateSpawnPoint();
         }
@@ -36,7 +36,6 @@ public class SpawningEngine : MonoBehaviour
             GameObject newPortal = Instantiate(enemyPrefab[Random.Range(0, enemyPrefab.Length)], spawnLocations, Quaternion.identity);
             curPortal = newPortal;
             spawnCD = 2.5f;
-            Debug.Log(curPortal.gameObject.transform.position);
         }
         else
         {

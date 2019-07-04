@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8107821067291067642}
   - component: {fileID: 7486357866607689264}
   m_Layer: 0
-  m_Name: PlayerBulletBase_0
+  m_Name: PlayerBullet
   m_TagString: Player Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -116,7 +116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 30
   timeAlive: 0
-  playerBulDamage: 10
+  playerBulDamage: 100
 --- !u!50 &8107821067291067642
 Rigidbody2D:
   serializedVersion: 4
