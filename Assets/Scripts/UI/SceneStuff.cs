@@ -26,7 +26,7 @@ public class SceneStuff : MonoBehaviour
         if (!playerAlive)
         {
             SceneManager.LoadSceneAsync("End");
-            Debug.Log("You Lost");
+            Debug.Log("You Lost and you killed " + enemiesKilled);
         }
     }
 }

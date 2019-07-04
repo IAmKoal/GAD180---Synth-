@@ -6,13 +6,14 @@ public class EnemyAttackPlaneStats : MonoBehaviour
 {
     public int enemyMaxHealth = 100;
     public int enemyCurrentHealth;
-    public SceneStuff scene;
+    public SceneStuff sceneStuff;
     public SpawningEngine spawningEngine;
 
     // Start is called before the first frame update
     void Start()
     {
         spawningEngine = GameObject.Find("PortalManager").GetComponent<SpawningEngine>();
+        sceneStuff = GameObject.Find("SceneManager").GetComponent<SceneStuff>();
         enemyCurrentHealth = enemyMaxHealth;
     }
 
@@ -22,6 +23,7 @@ public class EnemyAttackPlaneStats : MonoBehaviour
         if(enemyCurrentHealth <= 0)
         {
             spawningEngine.enemyAmt -= 1;
+            sceneStuff.enemiesKilled += 1;
             Destroy(gameObject);
             Debug.Log("Enemy Destroyed");
         }
