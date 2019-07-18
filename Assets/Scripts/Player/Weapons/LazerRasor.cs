@@ -8,7 +8,7 @@ public class LazerRasor : MonoBehaviour
     public Transform laserPoint;
     public LayerMask layerMask;
     PlayerStats playerCurrentLvl;
-    private int playerLvl;
+    private float playerLvl;
     // Start is called before the first frame update
     void Start()
     {
