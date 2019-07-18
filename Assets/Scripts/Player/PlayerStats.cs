@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using TMPro;
 public class PlayerStats : MonoBehaviour
 {
 
@@ -14,43 +14,61 @@ public class PlayerStats : MonoBehaviour
     public Transform BulletSpawn;
     public float fireRate;
     private float nextFire;
-    public int playerCurrentLevel;
 
     public GameObject ricochetBul;
     public Transform ricoBulSpawn;
     private float nextGrenadeFire;
+    public bool ricochetBulUnlocked = false;
+
+    public float playerCurrentLevel;
+    public PlayerLeveling currentLevel;
 
     // Start is called before the first frame update
     void Start()
     {
         sceneStuff = GameObject.Find("SceneManager").GetComponent<SceneStuff>();
         playerCurrentHealth = playerMaxHealth;
+        playerCurrentLevel = currentLevel.playerCurrentLevel;
     }
 
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKey(KeyCode.Space) && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
             Instantiate(Shot, BulletSpawn.position, BulletSpawn.rotation);
         }
 
-        Death();
-
-        if (nextGrenadeFire > 0)
+        if(playerCurrentLevel > 2)
         {
-            nextGrenadeFire -= Time.deltaTime;
+            ricochetBulUnlocked = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.Z) && nextGrenadeFire <= 0)
+        if(ricochetBulUnlocked == true)
+        {
+
+            if (Input.GetKeyDown(KeyCode.Z) && nextGrenadeFire <= 0)
+            {
+                Debug.Log("Grenade Fired!");
+                Instantiate(ricochetBul, ricoBulSpawn.transform.position, ricoBulSpawn.rotation);
+                nextGrenadeFire = 10;
+            }
+        }
+
+        if (nextGrenadeFire > 1)
         {
             Debug.Log("Grenade Fired!");
             Instantiate(ricochetBul, ricoBulSpawn.transform.position, ricoBulSpawn.rotation);
             nextGrenadeFire = 2;
         }
+
+        Death();
     }
 
+
+    
 
     private void OnTriggerEnter2D(Collider2D enemyBulCol)
     {
@@ -60,7 +78,6 @@ public class PlayerStats : MonoBehaviour
             playerCurrentHealth -= enemyBulDamage;
         }
     }
-
 
 
     public void Death()
