@@ -9,14 +9,15 @@ public class EnemyAttackPlaneStats : MonoBehaviour
     public SceneStuff sceneStuff;
     public SpawningEngine spawningEngine;
     public ParticleSystem particleSystem;
+    public Multiplier multiplier;
 
     // Start is called before the first frame update
     void Start()
     {
         spawningEngine = GameObject.Find("PortalManager").GetComponent<SpawningEngine>();
         sceneStuff = GameObject.Find("SceneManager").GetComponent<SceneStuff>();
+        multiplier = GameObject.Find("Multiplier").GetComponent<Multiplier>();
         enemyCurrentHealth = enemyMaxHealth;
-        
     }
 
     // Update is called once per frame
@@ -26,6 +27,7 @@ public class EnemyAttackPlaneStats : MonoBehaviour
         {
             spawningEngine.enemyAmt -= 1;
             sceneStuff.enemiesKilled += 1;
+            multiplier.KillEvent(50);
             Destroy(gameObject);
             Debug.Log("Enemy Destroyed");
         }
