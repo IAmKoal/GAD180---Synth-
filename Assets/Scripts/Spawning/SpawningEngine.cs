@@ -14,6 +14,7 @@ public class SpawningEngine : MonoBehaviour
     void Start()
     {
         spawnCD = 0;
+        spawnLocations.z = -3;
     }
 
     // Update is called once per frame
@@ -21,7 +22,7 @@ public class SpawningEngine : MonoBehaviour
     {
         spawnLocations.x = (Random.Range(5, 85));
         spawnLocations.y = (Random.Range(-2, 35));
-        spawnLocations.z = -3;
+
         if (enemyAmt <= 9)
         {
             CreateSpawnPoint();

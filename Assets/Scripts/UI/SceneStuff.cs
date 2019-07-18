@@ -18,7 +18,7 @@ public class SceneStuff : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(enemiesKilled >= 20)
+        if(enemiesKilled >= 50)
         {
             SceneManager.LoadSceneAsync("End");
             Debug.Log("You Won");

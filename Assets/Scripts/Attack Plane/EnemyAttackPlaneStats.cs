@@ -8,8 +8,8 @@ public class EnemyAttackPlaneStats : MonoBehaviour
     public float enemyCurrentHealth;
     public SceneStuff sceneStuff;
     public SpawningEngine spawningEngine;
-    public ParticleSystem particleSystem;
     public Multiplier multiplier;
+    private IEnumerator coroutine;
 
     // Start is called before the first frame update
     void Start()
@@ -29,16 +29,24 @@ public class EnemyAttackPlaneStats : MonoBehaviour
             sceneStuff.enemiesKilled += 1;
             multiplier.KillEvent(50);
             Destroy(gameObject);
-            Debug.Log("Enemy Destroyed");
         }
         if(enemyCurrentHealth <= 51 && enemyCurrentHealth > 0)
         {
-            particleSystem.Play();
+            gameObject.GetComponentInChildren<ParticleSystem>().Play();
         }
     }
 
     public void Damage(float damage)
     {
+        coroutine = DamageIndication(0.1f);
+        StartCoroutine(coroutine);
         enemyCurrentHealth -= damage;
+    }
+
+    private IEnumerator DamageIndication(float time)
+    {
+        gameObject.GetComponent<SpriteRenderer>().material.SetFloat("_FlashAmount", 1);
+        yield return new WaitForSeconds(time);
+        gameObject.GetComponent<SpriteRenderer>().material.SetFloat("_FlashAmount", 0);
     }
 }

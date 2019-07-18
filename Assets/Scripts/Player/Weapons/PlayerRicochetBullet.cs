@@ -6,7 +6,7 @@ public class PlayerRicochetBullet : MonoBehaviour
 {
     public float speed;
     public float timeAlive;
-    public int playerBulDamage = 30;
+    public int playerBulDamage = 50;
     public int currentDegree;
     public GameObject ricochetBul;
     public int childNumber = 0;
@@ -14,9 +14,20 @@ public class PlayerRicochetBullet : MonoBehaviour
     public EnemyAttackPlaneStats enemy;
 
     private void Start()
-    { 
-        GetComponent<Rigidbody2D>().velocity = transform.right * speed;
+    {
+        if (childNumber < 1)
+        {
+            GetComponent<Rigidbody2D>().gravityScale = 3;
+        }
+        else
+        {
+            GetComponent<Rigidbody2D>().velocity = transform.right * speed;
+        }
         timeAlive = 10f;
+        if (childNumber > 3)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Update()
@@ -30,18 +41,16 @@ public class PlayerRicochetBullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D enemyCollider)
     {
-        Debug.Log(enemyCollider.gameObject.name);
-
         if (enemyCollider.gameObject.tag == "Enemy Bi Plane" && enemyCollider.gameObject.name != previousEnemy)
         {
             enemyCollider.GetComponent<EnemyAttackPlaneStats>().Damage(50);
-            if (childNumber <= 2)
+            if (childNumber <= 3)
             {                
-                Debug.Log(enemyCollider.gameObject.name);
                 for (int x = 0; x < 4; x++)
                 {
                     childNumber++;
@@ -51,10 +60,6 @@ public class PlayerRicochetBullet : MonoBehaviour
                     currentDegree += Random.Range(0, 90);
                 }
                 Destroy(gameObject);
-            }
-            else
-            {
-                Destroy(this);
             }
         }
     }

@@ -5,22 +5,13 @@ using UnityEngine.SceneManagement;
 using TMPro;
 public class PlayerStats : MonoBehaviour
 {
-
-    public int playerMaxHealth = 100;
-    public int playerCurrentHealth;
-    public int playerShield;
+    public int playerMaxHealth = 100, playerCurrentHealth, playerShield;
     public SceneStuff sceneStuff;
-    public GameObject Shot;
-    public Transform BulletSpawn;
-    public float fireRate;
-    private float nextFire;
-
-    public GameObject ricochetBul;
-    public Transform ricoBulSpawn;
-    private float nextGrenadeFire;
-    public bool ricochetBulUnlocked = false;
-
-    public float playerCurrentLevel;
+    public GameObject Shot, ricochetBul;
+    public Transform BulletSpawn, ricoBulSpawn;
+    public float fireRate, playerCurrentLevel, evolveCD;
+    private float nextFire, nextGrenadeFire;
+    public bool ricochetBulUnlocked = false, jetPlaneUnlocked = false, laserUnlocked = false, jetPlaneEvolved = false;
     public PlayerLeveling currentLevel;
 
     // Start is called before the first frame update
@@ -28,47 +19,29 @@ public class PlayerStats : MonoBehaviour
     {
         sceneStuff = GameObject.Find("SceneManager").GetComponent<SceneStuff>();
         playerCurrentHealth = playerMaxHealth;
-        playerCurrentLevel = currentLevel.playerCurrentLevel;
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetKey(KeyCode.Space) && Time.time > nextFire)
+        playerCurrentLevel = currentLevel.playerCurrentLevel;
+        switch (playerCurrentLevel)
         {
-            nextFire = Time.time + fireRate;
-            Instantiate(Shot, BulletSpawn.position, BulletSpawn.rotation);
+            case 2:
+                ricochetBulUnlocked = true;
+                break;
+            case 3:
+                jetPlaneUnlocked = true;
+                break;
+            case 4:
+                laserUnlocked = true;
+                break;
+            default:
+                break;
         }
-
-        if(playerCurrentLevel > 2)
-        {
-            ricochetBulUnlocked = true;
-        }
-
-        if(ricochetBulUnlocked == true)
-        {
-
-            if (Input.GetKeyDown(KeyCode.Z) && nextGrenadeFire <= 0)
-            {
-                Debug.Log("Grenade Fired!");
-                Instantiate(ricochetBul, ricoBulSpawn.transform.position, ricoBulSpawn.rotation);
-                nextGrenadeFire = 10;
-            }
-        }
-
-        if (nextGrenadeFire > 1)
-        {
-            Debug.Log("Grenade Fired!");
-            Instantiate(ricochetBul, ricoBulSpawn.transform.position, ricoBulSpawn.rotation);
-            nextGrenadeFire = 2;
-        }
-
         Death();
+        WeaponsCheck();
     }
-
-
-    
 
     private void OnTriggerEnter2D(Collider2D enemyBulCol)
     {
@@ -79,12 +52,47 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-
     public void Death()
     {
         if (playerCurrentHealth <= 0)
         {
             sceneStuff.playerAlive = false;
+        }
+    }
+
+    public void WeaponsCheck()
+    {
+        if (Input.GetKey(KeyCode.Space) && Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+            Instantiate(Shot, BulletSpawn.position, BulletSpawn.rotation);
+        }
+
+        if (ricochetBulUnlocked == true)
+        {
+            if (Input.GetKeyDown(KeyCode.Z) && nextGrenadeFire <= 0)
+            {
+                Instantiate(ricochetBul, ricoBulSpawn.transform.position, ricoBulSpawn.rotation);
+                nextGrenadeFire = 5;
+            }
+            else if(nextGrenadeFire > 0)
+            {
+                nextGrenadeFire -= Time.deltaTime;
+            }
+        }
+
+        if (jetPlaneUnlocked == true)
+        {
+            //changes the players air craft into the jet can be switched
+            if(Input.GetKeyDown(KeyCode.V) && evolveCD <= 0)
+            {
+                //this toggles the plane state
+                jetPlaneEvolved = !jetPlaneEvolved;
+                //Play swap animation
+                //makes sure the player doesn't spam
+                evolveCD = 5f;
+                //change physics of the plane
+            }
         }
     }
 }

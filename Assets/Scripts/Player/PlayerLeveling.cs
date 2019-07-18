@@ -8,49 +8,36 @@ public class PlayerLeveling : MonoBehaviour
     public int playerCurrentLevel = 1;
     public Scoring score;
     public int playerCurrentScore;
-    
-
-    private void Start()
-    {
-        playerCurrentScore = score.totalScore;
-    }
-
+    public TMP_Text text;
 
     // Update is called once per frame
     void Update()
     {
         IncreasePlayerLevel();
-
+        playerCurrentScore = score.totalScore;
     }
 
     private void IncreasePlayerLevel()
     {
-        if (playerCurrentScore >= 1000)
+        if (playerCurrentScore >= 1000 && playerCurrentLevel < 2)
         {
-            Debug.Log("You Leved Up!");
-            playerCurrentLevel = +1;
+            playerCurrentLevel += 1;
         }
-        this.GetComponent<TMP_Text>().text = playerCurrentLevel.ToString();
+        
+        if (playerCurrentScore >= 2000 && playerCurrentLevel < 3)
+        {
+            playerCurrentLevel += 1;
+        }
 
-        if (playerCurrentScore >= 2000)
+        if (playerCurrentScore >= 4000 && playerCurrentLevel < 4)
         {
-            Debug.Log("You Leved Up!");
-            playerCurrentLevel = +1;
+            playerCurrentLevel += 1;
         }
-        this.GetComponent<TMP_Text>().text = playerCurrentLevel.ToString();
 
-        if (playerCurrentScore >= 4000)
+        if (playerCurrentScore >= 6000 && playerCurrentLevel < 5)
         {
-            Debug.Log("You Leved Up!");
-            playerCurrentLevel = +1;
+            playerCurrentLevel += 1;
         }
-        this.GetComponent<TMP_Text>().text = playerCurrentLevel.ToString();
-
-        if (playerCurrentScore >= 6000)
-        {
-            Debug.Log("You Leved Up!");
-            playerCurrentLevel = +1;
-        }
-        this.GetComponent<TMP_Text>().text = playerCurrentLevel.ToString();
+        text.text = "Level - " + playerCurrentLevel.ToString();
     }
 }

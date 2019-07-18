@@ -42,7 +42,7 @@ public class Multiplier : MonoBehaviour
         {
             multiplier += 1;
         }
-        timeToKill = 5;
+        timeToKill = 3;
         scoring.UpdateScore(multiplier * score);
     }
 

@@ -6,7 +6,7 @@ public class PlayerBullet : MonoBehaviour
 {
     public float speed;
     public float timeAlive;
-    public int playerBulDamage = 25;
+    public int playerBulDamage = 35;
     private void Start()
     {
         GetComponent<Rigidbody2D>().velocity = transform.right * speed;
