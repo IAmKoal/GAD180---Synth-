@@ -7,26 +7,21 @@ public class PlayerRicochetBullet : MonoBehaviour
     public float speed;
     public float timeAlive;
     public int playerBulDamage = 30;
-    public float currentDegree = 45f;
-    private float nextGrenadeFire;
+    public int currentDegree;
     public GameObject ricochetBul;
-
-    public float ricochetSpawnAmt;
-    public bool spawnRicochet;
-    private IEnumerator coroutine;
-
-    public Collider2D previousEnemy;
+    public int childNumber = 0;
+    public string previousEnemy;
+    public EnemyAttackPlaneStats enemy;
 
     private void Start()
-    {
+    { 
         GetComponent<Rigidbody2D>().velocity = transform.right * speed;
         timeAlive = 10f;
-
-        spawnRicochet = true;
     }
 
     private void Update()
     {
+        currentDegree = (int)gameObject.transform.rotation.y;
         if (timeAlive >= 0)
         {
             timeAlive -= Time.deltaTime;
@@ -35,27 +30,32 @@ public class PlayerRicochetBullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-
-        if (nextGrenadeFire > 0)
-        {
-            nextGrenadeFire -= Time.deltaTime;
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D enemyCollider)
     {
+        Debug.Log(enemyCollider.gameObject.name);
 
-
-        if (enemyCollider.gameObject.tag == "Enemy Bi Plane" && enemyCollider !=previousEnemy)
+        if (enemyCollider.gameObject.tag == "Enemy Bi Plane" && enemyCollider.gameObject.name != previousEnemy)
         {
-            for (int x = 0; x < 4; x++)
+            enemyCollider.GetComponent<EnemyAttackPlaneStats>().Damage(50);
+            if (childNumber <= 2)
+            {                
+                Debug.Log(enemyCollider.gameObject.name);
+                for (int x = 0; x < 4; x++)
+                {
+                    childNumber++;
+                    GameObject child = Instantiate(ricochetBul, gameObject.transform.position, Quaternion.Euler(new Vector3(0, 0, currentDegree)));
+                    child.GetComponent<PlayerRicochetBullet>().previousEnemy = enemyCollider.gameObject.name;
+                    child.GetComponent<PlayerRicochetBullet>().childNumber = childNumber;
+                    currentDegree += Random.Range(0, 90);
+                }
+                Destroy(gameObject);
+            }
+            else
             {
-                Instantiate(ricochetBul, gameObject.transform.position, Quaternion.Euler(new Vector3(0, currentDegree, 0)));
-                currentDegree += 90f;
+                Destroy(this);
             }
         }
-
-        previousEnemy = enemyCollider;
     }
 }

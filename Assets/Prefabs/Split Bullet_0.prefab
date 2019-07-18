@@ -118,10 +118,11 @@ MonoBehaviour:
   speed: 15
   timeAlive: 0
   playerBulDamage: 10
-  currentDegree: 45
+  currentDegree: 0
   ricochetBul: {fileID: 2297340793282269790}
-  ricochetSpawnAmt: 0
-  spawnRicochet: 0
+  childNumber: 0
+  previousEnemy: {fileID: 0}
+  enemy: {fileID: 8306532648838730766, guid: e6f15279cbe7f1c4c927a8342b7441ea, type: 3}
 --- !u!61 &-4732624407085876213
 BoxCollider2D:
   m_ObjectHideFlags: 0

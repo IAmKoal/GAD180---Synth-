@@ -47,7 +47,7 @@ public class PlayerStats : MonoBehaviour
         {
             Debug.Log("Grenade Fired!");
             Instantiate(ricochetBul, ricoBulSpawn.transform.position, ricoBulSpawn.rotation);
-            nextGrenadeFire = 10;
+            nextGrenadeFire = 2;
         }
     }
 

@@ -9,12 +9,14 @@ public class PortalScript : MonoBehaviour
     public SpawningEngine spawningEngine;
     public bool spawnSomething;
     private IEnumerator coroutine;
+    public SceneStuff sceneStuff;
 
     // Start is called before the first frame update
     private void Start()
     {
         spawnSomething = true;
         spawningEngine = GameObject.Find("PortalManager").GetComponent<SpawningEngine>();
+        sceneStuff = GameObject.Find("SceneManager").GetComponent<SceneStuff>();
         SpawnThemAll();
     }
 
@@ -26,6 +28,9 @@ public class PortalScript : MonoBehaviour
             StartCoroutine(coroutine);
             GameObject enemy = Instantiate(enemySpawns[Random.Range(0, enemySpawns.Length - 1)], gameObject.transform.position, Quaternion.identity);
             spawningEngine.enemyAmt += 1;
+            sceneStuff.enemiesSpawnNum += 1;
+            Debug.Log(sceneStuff.enemiesSpawnNum);
+            enemy.name = sceneStuff.IDCreator(enemy.name);
         }
         else if(spawnAmounts == 0)
         {

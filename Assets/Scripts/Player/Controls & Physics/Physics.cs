@@ -43,7 +43,6 @@ public class Physics : MonoBehaviour
         {
             planeBody.AddForce(transform.right * forceThrust);
             planeBody.gravityScale = 0.25f;
-            Debug.Log(planeBody.velocity.magnitude);
         }
 
         if(Input.GetKey(KeyCode.D))

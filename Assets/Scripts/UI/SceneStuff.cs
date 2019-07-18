@@ -7,6 +7,7 @@ public class SceneStuff : MonoBehaviour
 {
     public float enemiesKilled;
     public bool playerAlive;
+    public int enemiesSpawnNum;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,5 +29,12 @@ public class SceneStuff : MonoBehaviour
             SceneManager.LoadSceneAsync("End");
             Debug.Log("You Lost and you killed " + enemiesKilled);
         }
+    }
+
+    public string IDCreator(string name)
+    {
+        string enemyID = enemiesSpawnNum.ToString();
+        name = name + enemyID;
+        return name;
     }
 }

@@ -7,7 +7,6 @@ public class PlayerBullet : MonoBehaviour
     public float speed;
     public float timeAlive;
     public int playerBulDamage = 25;
-
     private void Start()
     {
         GetComponent<Rigidbody2D>().velocity = transform.right * speed;
@@ -24,5 +23,14 @@ public class PlayerBullet : MonoBehaviour
         {
             Destroy(gameObject);
         }   
+    }
+
+    private void OnTriggerEnter2D(Collider2D enemyCollider)
+    {
+        if (enemyCollider.gameObject.tag == "Enemy Bi Plane")
+        {
+            enemyCollider.GetComponent<EnemyAttackPlaneStats>().Damage(25);
+            Destroy(gameObject);
+        }
     }
 }

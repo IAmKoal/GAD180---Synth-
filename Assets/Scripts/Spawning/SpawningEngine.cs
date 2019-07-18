@@ -9,7 +9,6 @@ public class SpawningEngine : MonoBehaviour
     public float spawnCD;
     public GameObject[] enemyPrefab;
     public float enemyAmt;
-    public GameObject curPortal;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +33,6 @@ public class SpawningEngine : MonoBehaviour
         if(spawnCD <= 0)
         {
             GameObject newPortal = Instantiate(enemyPrefab[Random.Range(0, enemyPrefab.Length)], spawnLocations, Quaternion.identity);
-            curPortal = newPortal;
             spawnCD = 2.5f;
         }
         else

@@ -117,6 +117,7 @@ MonoBehaviour:
   speed: 30
   timeAlive: 0
   playerBulDamage: 25
+  enemy: {fileID: 8306532648838730766, guid: e6f15279cbe7f1c4c927a8342b7441ea, type: 3}
 --- !u!50 &8107821067291067642
 Rigidbody2D:
   serializedVersion: 4

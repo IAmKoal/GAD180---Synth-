@@ -35,17 +35,6 @@ public class EnemyAttackPlaneStats : MonoBehaviour
         {
             particleSystem.Play();
         }
-
-    }
-
-    private void OnTriggerEnter2D(Collider2D playerBulCol)
-    {
-        if (playerBulCol.gameObject.tag == "Player Bullet")
-        {
-            int playerBulDamage = playerBulCol.gameObject.GetComponent<PlayerBullet>().playerBulDamage;
-            enemyCurrentHealth -= playerBulDamage;
-            Debug.Log("Enemy Hit By Player Bullet");
-        }
     }
 
     public void Damage(float damage)
