@@ -14,12 +14,17 @@ public class PlayerStats : MonoBehaviour
     public Transform BulletSpawn;
     public float fireRate;
     private float nextFire;
+    public int playerCurrentLevel;
+
+    public GameObject ricochetBul;
+    public Transform ricoBulSpawn;
+    private float nextGrenadeFire;
 
     // Start is called before the first frame update
     void Start()
     {
         sceneStuff = GameObject.Find("SceneManager").GetComponent<SceneStuff>();
-        playerCurrentHealth = playerMaxHealth;  
+        playerCurrentHealth = playerMaxHealth;
     }
 
     // Update is called once per frame
@@ -32,7 +37,21 @@ public class PlayerStats : MonoBehaviour
         }
 
         Death();
+
+        if (nextGrenadeFire > 0)
+        {
+            nextGrenadeFire -= Time.deltaTime;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Z) && nextGrenadeFire <= 0)
+        {
+            Debug.Log("Grenade Fired!");
+            Instantiate(ricochetBul, ricoBulSpawn.transform.position, ricoBulSpawn.rotation);
+            nextGrenadeFire = 10;
+        }
     }
+
+
     private void OnTriggerEnter2D(Collider2D enemyBulCol)
     {
         if (enemyBulCol.gameObject.tag == "Enemy Bullet")
@@ -41,6 +60,8 @@ public class PlayerStats : MonoBehaviour
             playerCurrentHealth -= enemyBulDamage;
         }
     }
+
+
 
     public void Death()
     {
