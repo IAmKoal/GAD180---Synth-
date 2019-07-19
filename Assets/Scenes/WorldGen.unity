@@ -346,7 +346,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 122518740}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: LaserSpawn
   m_TagString: Untagged
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
@@ -1997,7 +1997,7 @@ GameObject:
   m_Component:
   - component: {fileID: 790591227}
   - component: {fileID: 790591226}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Levelling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3375,7 +3375,7 @@ GameObject:
   - component: {fileID: 1400551472}
   - component: {fileID: 1400551467}
   - component: {fileID: 1400551474}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -3835,7 +3835,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1500162518}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: GrenadeSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
