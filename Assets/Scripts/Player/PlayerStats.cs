@@ -84,15 +84,23 @@ public class PlayerStats : MonoBehaviour
         if (jetPlaneUnlocked == true)
         {
             //changes the players air craft into the jet can be switched
-            if(Input.GetKeyDown(KeyCode.V) && evolveCD <= 0)
+            if(Input.GetKeyDown(KeyCode.LeftShift) && evolveCD <= 0)
             {
                 //this toggles the plane state
                 jetPlaneEvolved = !jetPlaneEvolved;
                 //Play swap animation
                 //makes sure the player doesn't spam
                 evolveCD = 5f;
-                //change physics of the plane
             }
+        }
+
+        if(evolveCD > 0)
+        {
+            evolveCD -= Time.deltaTime;
+        }
+        else
+        {
+            evolveCD = 0;
         }
     }
 }

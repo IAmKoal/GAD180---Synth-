@@ -33,6 +33,14 @@ public class FlightPhysics : MonoBehaviour
         else
         {
             //JET Plane Stalled Behaviour (Slower Descent / Slower turn Speed) 
+            if (Input.GetKeyUp(KeyCode.W))
+            {
+                planeBody.gravityScale = 1;
+            }
+            if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.A))
+            {
+                planeBody.angularDrag = 20;
+            }
         }
     }
 
@@ -61,6 +69,23 @@ public class FlightPhysics : MonoBehaviour
         else
         {
             //Jet Plane Moving Behaviour(Slower Descent / Slower turn Speed / Super Fast)
+            if (Input.GetKey(KeyCode.W))
+            {
+                planeBody.AddForce(transform.right * forceThrust * 2);
+                planeBody.gravityScale = 0.1f;
+            }
+
+            if (Input.GetKey(KeyCode.D))
+            {
+                planeBody.angularDrag = 20;
+                planeBody.AddTorque(-rotationSpeed / 2);
+            }
+
+            if (Input.GetKey(KeyCode.A))
+            {
+                planeBody.angularDrag = 20;
+                planeBody.AddTorque(rotationSpeed / 2);
+            }
         }
     }
 }
