@@ -11,6 +11,7 @@ TagManager:
   - Enemy Bi Plane
   - Enemy Bomber
   - Bomber Respawn
+  - Ground
   layers:
   - Default
   - TransparentFX

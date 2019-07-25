@@ -4896,6 +4896,7 @@ MonoBehaviour:
   sceneStuff: {fileID: 0}
   spawningEngine: {fileID: 0}
   multiplier: {fileID: 0}
+  isAlive: 1
 --- !u!114 &8365811658466682257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4912,6 +4913,7 @@ MonoBehaviour:
   enemyBody: {fileID: 7590906903238449026}
   angleChangingSpeed: 120
   movementSpeed: 10
+  enemy: {fileID: 0}
 --- !u!50 &7590906903238449026
 Rigidbody2D:
   serializedVersion: 4
