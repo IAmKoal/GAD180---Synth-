@@ -8,11 +8,15 @@ public class LazerRasor : MonoBehaviour
     public Transform laserPoint;
     public LayerMask layerMask;
     public PlayerStats playerStats;
+    public float laserLeft;
+    public bool canShoot;
     // Start is called before the first frame update
     void Start()
     {
+        laserLeft = 2.5f;
         laserRender.enabled = false;
         laserRender.useWorldSpace = true;
+        canShoot = true;
     }
 
     // Update is called once per frame
@@ -20,7 +24,7 @@ public class LazerRasor : MonoBehaviour
     {
         if (playerStats.laserUnlocked == true)
         {
-            if (Input.GetKey(KeyCode.X))
+            if (Input.GetKey(KeyCode.X) && laserLeft > 0 && canShoot == true)
             {
                 RaycastHit2D hit = Physics2D.Raycast(laserPoint.position, transform.right, 20, layerMask);
                 if (hit)
@@ -38,13 +42,25 @@ public class LazerRasor : MonoBehaviour
                 {
                     if (hit.collider.gameObject.tag == "Enemy Bi Plane")
                     {
-                        hit.collider.gameObject.GetComponent<EnemyAttackPlaneStats>().Damage(200 * Time.deltaTime);
+                        hit.collider.gameObject.GetComponent<EnemyAttackPlaneStats>().Damage(100);
                     }
                 }
                 laserRender.enabled = true;
+                laserLeft -= Time.deltaTime;
             }
             else
             {
+                if (laserLeft < 2.5f)
+                {
+                    laserLeft += Time.deltaTime;
+                    canShoot = false;
+                }
+                else
+                {
+                    laserLeft = 2.5f;
+                    canShoot = true;
+                }
+
                 laserRender.enabled = false;
             }
         }
