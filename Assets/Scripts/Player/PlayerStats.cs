@@ -19,6 +19,8 @@ public class PlayerStats : MonoBehaviour
     {
         sceneStuff = GameObject.Find("SceneManager").GetComponent<SceneStuff>();
         playerCurrentHealth = playerMaxHealth;
+
+        StartCoroutine(addHealth());
     }
 
     // Update is called once per frame
@@ -41,6 +43,18 @@ public class PlayerStats : MonoBehaviour
         }
         Death();
         WeaponsCheck();
+    }
+
+    IEnumerator addHealth()
+    {
+        while (true)
+            if (playerCurrentHealth < 100)
+            {
+                playerCurrentHealth += 2;
+                yield return new WaitForSeconds(1);
+            }
+            else
+                yield return null;
     }
 
     private void OnTriggerEnter2D(Collider2D enemyBulCol)
