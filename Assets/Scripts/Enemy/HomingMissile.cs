@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
 public class HomingMissile : MonoBehaviour
 {
 
@@ -14,7 +13,7 @@ public class HomingMissile : MonoBehaviour
     //GameCamera explosionEffect;
 
     [SerializeField]
-    float thrust = 10;
+    float thrust = 1;
 
     [SerializeField]
     float rotateSpeed = 200f;
