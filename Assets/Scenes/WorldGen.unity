@@ -3944,8 +3944,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1645775211}
+  - component: {fileID: 1645775212}
   m_Layer: 0
-  m_Name: BomberRespawn
+  m_Name: BomberPortalManager
   m_TagString: Bomber Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3965,6 +3966,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1645775212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645775210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17e58d2bb69a9cd4f826e17317606cb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnCoolDown: 10
+  bomberPrefab:
+  - {fileID: 9002884250849724816, guid: 4c5c2e7b75b216c4591112a392879b0e, type: 3}
+  bomberAmt: 0
 --- !u!1 &1664386028 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1857355901348779989, guid: f9cd6f09aee4b97408431cdefaea7476,

@@ -5,7 +5,7 @@ using UnityEngine;
 public class BomberMovement : MonoBehaviour
 {
     [SerializeField]
-    float thrust = 10f;
+    float thrust = 25f;
 
     private Rigidbody2D rb;
 
@@ -21,6 +21,6 @@ public class BomberMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.AddForce(Vector3.forward * thrust);
+        rb.AddForce(Vector3.right * thrust);
     }
 }

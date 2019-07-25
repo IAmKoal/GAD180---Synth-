@@ -4958,7 +4958,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.01966095, y: 0.06769562}
@@ -5005,9 +5005,6 @@ MonoBehaviour:
   bomberCurrentHealth: 0
   sceneStuff: {fileID: 0}
   multiplier: {fileID: 0}
-  respawnPrefab: {fileID: 9002884250849724816}
-  respawns:
-  - {fileID: 0}
 --- !u!1001 &3526489741207448328
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5074,6 +5071,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7544211280825659241, guid: 0bae0e8cb80bc1a4dbc350a839f8e797,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5591324792394512522, guid: 0bae0e8cb80bc1a4dbc350a839f8e797,
         type: 3}

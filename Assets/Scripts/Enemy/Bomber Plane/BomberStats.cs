@@ -11,23 +11,12 @@ public class BomberStats : MonoBehaviour
     public Multiplier multiplier;
     private IEnumerator coroutine;
 
-    public GameObject respawnPrefab;
-    public GameObject[] respawns;
-
     // Start is called before the first frame update
     void Start()
     {
         bomberCurrentHealth = bomberMaxHealth;
         sceneStuff = GameObject.Find("SceneManager").GetComponent<SceneStuff>();
         multiplier = GameObject.Find("Multiplier").GetComponent<Multiplier>();
-
-        if (respawns == null)
-            respawns = GameObject.FindGameObjectsWithTag("Bomber Respawn");
-        foreach (GameObject respawn in respawns)
-        {
-            Instantiate(respawnPrefab, respawn.transform.position, respawn.transform.rotation);
-            Debug.Log("Enemy Bomber Incoming");
-        }
         
     }
 
