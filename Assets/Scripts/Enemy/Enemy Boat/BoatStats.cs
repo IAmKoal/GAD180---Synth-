@@ -5,10 +5,9 @@ using UnityEngine;
 public class BoatStats : MonoBehaviour
 {
 
-    public Transform startPoint;
-    public Transform finishPoint;
+    public Transform pointA;
+    public Transform pointB;
     public float moveSpeed = 1.0f;
-    private IEnumerable boatMovement;
 
 
     public float boatMaxHealth;
@@ -18,47 +17,59 @@ public class BoatStats : MonoBehaviour
     private IEnumerator coroutine;
 
 
+    public GameObject EnemyMissile;
+    public Transform EnemyMissileSpawn;
+    public float missileCooldownTime = 5;
+    private float missileNextFireTime = 10;
+
+
     // Start is called before the first frame update
     void Start()
     {
         boatCurrentHealth = boatMaxHealth;
-        StartCoroutine(boatMovement)();
+
+        if (Time.time == 10)
+        {
+            missileCooldownTime = 0;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if ( boatCurrentHealth <= 0)
+
+        BoatHealth();
+
+
+        BoatMovement();
+
+        if (Time.time > missileNextFireTime)
+        {
+            Instantiate(EnemyMissile, EnemyMissileSpawn.position, EnemyMissileSpawn.rotation);
+            Debug.Log("Incoming Enemy Missile Detected!");
+            missileNextFireTime = Time.time + missileCooldownTime;
+        }
+
+    }
+
+    void BoatHealth()
+    {
+        if (boatCurrentHealth <= 0)
         {
             sceneStuff.enemiesKilled += 2;
             multiplier.KillEvent(75);
             Destroy(gameObject);
         }
+
         if (boatCurrentHealth <= 51 && boatCurrentHealth > 0)
         {
             gameObject.GetComponentInChildren<ParticleSystem>().Play();
         }
-
-        BoatMovement();
     }
 
-    IEnumerator BoatMovement()
+    void BoatMovement()
     {
-
-        for ( int i = 0, i ++)
-        {
-            if (transform.position == startPoint.position)
-                WaitForSeconds
-            {
-                transform.position = Vector3.LerpUnclamped(startPoint.position, finishPoint.position, moveSpeed);
-            }
-
-        }
-
-        if (transform.position == finishPoint.position)
-        {
-            transform.position = Vector3.LerpUnclamped(finishPoint.position, startPoint.position, moveSpeed);
-        }
+        transform.position = Vector3.Lerp(pointA.position, pointB.position, Mathf.Sin(Time.time * moveSpeed));
     }
 
     public void Damage(float damage)
