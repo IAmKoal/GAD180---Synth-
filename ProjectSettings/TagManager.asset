@@ -9,6 +9,8 @@ TagManager:
   - Player Bullet
   - Enemy Bullet
   - Enemy Bi Plane
+  - Enemy Bomber
+  - Bomber Respawn
   layers:
   - Default
   - TransparentFX
