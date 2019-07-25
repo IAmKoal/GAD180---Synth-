@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 public class PlayerStats : MonoBehaviour
 {
-    public int playerMaxHealth = 100, playerCurrentHealth, playerShield;
+    public int playerMaxHealth = 100, playerCurrentHealth, playerPreviousHealth;
     public SceneStuff sceneStuff;
     public GameObject Shot, ricochetBul;
     public Transform BulletSpawn, ricoBulSpawn;
@@ -68,6 +68,11 @@ public class PlayerStats : MonoBehaviour
 
     public void Death()
     {
+        if (playerCurrentHealth < playerPreviousHealth)
+        {
+            playerPreviousHealth = playerCurrentHealth;
+        }
+
         if (playerCurrentHealth <= 0)
         {
             sceneStuff.playerAlive = false;
