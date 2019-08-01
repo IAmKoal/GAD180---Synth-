@@ -70,6 +70,11 @@ public class BoatStats : MonoBehaviour
     void BoatMovement()
     {
         transform.position = Vector3.Lerp(pointA.position, pointB.position, Mathf.Sin(Time.time * moveSpeed));
+
+        if (transform.position != pointA.position && transform.position != pointB.position)
+        {
+            transform.position.y = transform.position.y 
+        }
     }
 
     public void Damage(float damage)
