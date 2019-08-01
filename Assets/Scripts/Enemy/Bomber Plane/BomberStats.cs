@@ -52,4 +52,12 @@ public class BomberStats : MonoBehaviour
         yield return new WaitForSeconds(time);
         gameObject.GetComponent<SpriteRenderer>().material.SetFloat("_FlashAmount", 0);
     }
+
+    private IEnumerator DeathAnim(float time)
+    {
+        //animation of plane dying
+        gameObject.GetComponent<Rigidbody2D>().angularDrag *= 5;
+        yield return new WaitForSeconds(time);
+        Destroy(gameObject);
+    }
 }

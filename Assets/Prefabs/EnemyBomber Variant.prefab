@@ -4908,7 +4908,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9002884250849724816}
   m_BodyType: 0
-  m_Simulated: 0
+  m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 0.0001
@@ -5005,6 +5005,9 @@ MonoBehaviour:
   bomberCurrentHealth: 0
   sceneStuff: {fileID: 0}
   multiplier: {fileID: 0}
+  isAlive: 1
+  respawnPrefab: {fileID: 0}
+  respawns: []
 --- !u!1001 &3526489741207448328
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5090,7 +5093,7 @@ PrefabInstance:
     - target: {fileID: 4670753214905562454, guid: 0bae0e8cb80bc1a4dbc350a839f8e797,
         type: 3}
       propertyPath: m_Simulated
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5591324792394512522, guid: 0bae0e8cb80bc1a4dbc350a839f8e797,
         type: 3}

@@ -32,5 +32,11 @@ public class PlayerBullet : MonoBehaviour
             enemyCollider.GetComponent<EnemyAttackPlaneStats>().Damage(25);
             Destroy(gameObject);
         }
+
+        if (enemyCollider.gameObject.tag == "Enemy Bomber")
+        {
+            enemyCollider.GetComponent<BomberStats>().Damage(20);
+            Destroy(gameObject);
+        }
     }
 }

@@ -9,18 +9,13 @@ public class BomberMovement : MonoBehaviour
 
     private Rigidbody2D rb;
 
-
-
-
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb = gameObject.GetComponent<Rigidbody2D>();  
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        rb.AddForce(Vector3.right * thrust);
+        rb.velocity = transform.right * thrust;
     }
 }
