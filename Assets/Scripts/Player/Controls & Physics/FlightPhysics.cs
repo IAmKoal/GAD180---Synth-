@@ -35,11 +35,11 @@ public class FlightPhysics : MonoBehaviour
             //JET Plane Stalled Behaviour (Slower Descent / Slower turn Speed) 
             if (Input.GetKeyUp(KeyCode.W))
             {
-                planeBody.gravityScale = 1;
+                planeBody.gravityScale = 1.5f;
             }
             if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.A))
             {
-                planeBody.angularDrag = 20;
+                planeBody.angularDrag = 15;
             }
         }
     }

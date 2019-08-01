@@ -2360,6 +2360,56 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &960166891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 960166892}
+  - component: {fileID: 960166893}
+  m_Layer: 11
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &960166892
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960166891}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.507, y: -0.028, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1400551469}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &960166893
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960166891}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 917b48bbb5a8b8641a56664524ca0999, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &974298562
 GameObject:
   m_ObjectHideFlags: 0
@@ -3659,6 +3709,7 @@ Transform:
   - {fileID: 1500162518}
   - {fileID: 790591227}
   - {fileID: 1530858269}
+  - {fileID: 960166892}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3757,7 +3808,7 @@ MonoBehaviour:
   playerPreviousHealth: 0
   sceneStuff: {fileID: 1828381759}
   Shot: {fileID: 250150125960704233, guid: 8707e10dc892bd747a35872480368ddb, type: 3}
-  ricochetBul: {fileID: 2297340793282269790, guid: 51e9198837b97d747a7fb297c4820027,
+  ricochetBul: {fileID: 4964215499307692371, guid: 27651b5c5a018b9448640f4d8f383ff1,
     type: 3}
   BulletSpawn: {fileID: 122518740}
   ricoBulSpawn: {fileID: 1500162518}
@@ -3769,6 +3820,10 @@ MonoBehaviour:
   laserUnlocked: 0
   jetPlaneEvolved: 0
   currentLevel: {fileID: 790591226}
+  jetSprite: {fileID: 0}
+  planeSprite: {fileID: 0}
+  playerAnimator: {fileID: 0}
+  thrustAnim: {fileID: 960166893}
 --- !u!1 &1454933580
 GameObject:
   m_ObjectHideFlags: 0
@@ -9745,6 +9800,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTarget: {fileID: 1400551469}
+  animator: {fileID: 0}
   thrust: 1
   rotateSpeed: 200
 --- !u!61 &1918430391

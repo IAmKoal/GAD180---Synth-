@@ -6,7 +6,7 @@ public class HomingMissile : MonoBehaviour
 {
 
     public Transform playerTarget;
-
+    public Animator animator;
     private Rigidbody2D rb;
 
     //[SerializeField]
@@ -20,7 +20,6 @@ public class HomingMissile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         rb = GetComponent<Rigidbody2D>();
 
         playerTarget = GameObject.FindGameObjectWithTag("Player").transform;
@@ -41,6 +40,8 @@ public class HomingMissile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Instantiate(explosionEffect, transform.position, transform.rotation);
+        rb.velocity = new Vector2 (0,0);
+        animator.SetBool("Hit", true);
         Destroy(gameObject);
     }
 }

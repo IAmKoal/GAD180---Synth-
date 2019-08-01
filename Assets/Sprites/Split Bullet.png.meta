@@ -1,18 +1,12 @@
 fileFormatVersion: 2
 guid: 3b2550be4916d11468a0a9359c90d7c8
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 3480821772199902080
-    second: Split Bullet_0
-  - first:
-      213: 6494500098389353669
-    second: Split Bullet_1
-  - first:
-      213: -3622748413432562669
-    second: Split Bullet_2
+  fileIDToRecycleName:
+    21300000: Split Bullet_0
+    21300002: Split Bullet_1
+    21300004: Split Bullet_2
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 9
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -130,7 +124,6 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 91335f32919fcf84cad69b99e5b63d87
-      internalID: 3480821772199902080
       vertices: []
       indices: 
       edges: []
@@ -151,7 +144,6 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 7012ced0e32cd414b88a156a2582c9d9
-      internalID: 6494500098389353669
       vertices: []
       indices: 
       edges: []
@@ -172,7 +164,6 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 27c41e0c12358e74691edb0df34cca6e
-      internalID: -3622748413432562669
       vertices: []
       indices: 
       edges: []
@@ -181,12 +172,10 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: d7be1ca23141a4b40b5893e31ab42054
-    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
-    secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

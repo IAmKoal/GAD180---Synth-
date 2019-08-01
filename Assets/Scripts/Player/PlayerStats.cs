@@ -14,13 +14,15 @@ public class PlayerStats : MonoBehaviour
     public bool ricochetBulUnlocked = false, jetPlaneUnlocked = false, laserUnlocked = false, jetPlaneEvolved = false;
     public PlayerLeveling currentLevel;
     public IEnumerator coroutine;
+    public Sprite jetSprite, planeSprite;
+    public Animator playerAnimator, thrustAnim;
 
     // Start is called before the first frame update
     void Start()
     {
         sceneStuff = GameObject.Find("SceneManager").GetComponent<SceneStuff>();
         playerCurrentHealth = playerMaxHealth;
-
+        playerAnimator = gameObject.GetComponent<Animator>();
         StartCoroutine(AddHealth());
     }
 
@@ -115,7 +117,24 @@ public class PlayerStats : MonoBehaviour
             {
                 //this toggles the plane state
                 jetPlaneEvolved = !jetPlaneEvolved;
-                evolveCD = 5f;
+                evolveCD = 2.5f;
+                if (jetPlaneEvolved)
+                {
+                    playerAnimator.SetBool("jetPlaneEvolved", true);
+                }
+                else
+                {
+                    playerAnimator.SetBool("jetPlaneEvolved", false);
+                }
+            }
+
+            if(Input.GetKey(KeyCode.W))
+            {
+                thrustAnim.SetBool("Moving", true);
+            }
+            else if(Input.GetKeyUp(KeyCode.W))
+            {
+                thrustAnim.SetBool("Moving", false);
             }
         }
 

@@ -4871,11 +4871,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fb0ac6844f378e4cafcac6068162d11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyShot: {fileID: 5523480817955835905, guid: 6d12d9c36cdf9074a86570f5a5e069de,
+  EnemyShot: {fileID: 6337531305423562705, guid: 66465780792c09a40a7fb681514e6e5a,
     type: 3}
   EnemyBulletSpawn: {fileID: 8498127394605015415}
   fireRate: 0.4
-  EnemyMissile: {fileID: 7706852065258879456, guid: 9793bdc1ec7bc924e931f45148a50efb,
+  EnemyMissile: {fileID: 4932195329216646831, guid: 04aab21f1ffeb4e4b85c035950c40ae9,
     type: 3}
   EnemyMissileSpawn: {fileID: 8498127394605015415}
   missileCooldownTime: 5
