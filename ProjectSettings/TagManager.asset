@@ -12,6 +12,7 @@ TagManager:
   - Enemy Bomber
   - Bomber Respawn
   - Enemy Boat
+  - Ground
   layers:
   - Default
   - TransparentFX

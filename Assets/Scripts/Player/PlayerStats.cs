@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 public class PlayerStats : MonoBehaviour
 {
-    public int playerMaxHealth = 100, playerCurrentHealth, playerShield;
+    public int playerMaxHealth = 100, playerCurrentHealth, playerPreviousHealth;
     public SceneStuff sceneStuff;
     public GameObject Shot, ricochetBul;
     public Transform BulletSpawn, ricoBulSpawn;
@@ -13,12 +13,15 @@ public class PlayerStats : MonoBehaviour
     private float nextFire, nextGrenadeFire;
     public bool ricochetBulUnlocked = false, jetPlaneUnlocked = false, laserUnlocked = false, jetPlaneEvolved = false;
     public PlayerLeveling currentLevel;
+    public IEnumerator coroutine;
 
     // Start is called before the first frame update
     void Start()
     {
         sceneStuff = GameObject.Find("SceneManager").GetComponent<SceneStuff>();
         playerCurrentHealth = playerMaxHealth;
+
+        StartCoroutine(AddHealth());
     }
 
     // Update is called once per frame
@@ -43,12 +46,29 @@ public class PlayerStats : MonoBehaviour
         WeaponsCheck();
     }
 
+    IEnumerator AddHealth()
+    {
+        while (true)
+            if (playerCurrentHealth < 100)
+            {
+                playerCurrentHealth += 4;
+                yield return new WaitForSeconds(1);
+            }
+            else
+            {
+                playerCurrentHealth = 100;
+                yield return null;
+            }
+    }
+
     private void OnTriggerEnter2D(Collider2D enemyBulCol)
     {
         if (enemyBulCol.gameObject.tag == "Enemy Bullet")
         {
             int enemyBulDamage = enemyBulCol.gameObject.GetComponent<EnemyBullet>().enemyDamage;
             playerCurrentHealth -= enemyBulDamage;
+            coroutine = DamageIndication(0.1f);
+            StartCoroutine(coroutine);
         }
     }
 
@@ -58,6 +78,13 @@ public class PlayerStats : MonoBehaviour
         {
             sceneStuff.playerAlive = false;
         }
+    }
+
+    private IEnumerator DamageIndication(float time)
+    {
+        gameObject.GetComponent<SpriteRenderer>().material.SetFloat("_FlashAmount", 1);
+        yield return new WaitForSeconds(time);
+        gameObject.GetComponent<SpriteRenderer>().material.SetFloat("_FlashAmount", 0);
     }
 
     public void WeaponsCheck()
@@ -88,8 +115,6 @@ public class PlayerStats : MonoBehaviour
             {
                 //this toggles the plane state
                 jetPlaneEvolved = !jetPlaneEvolved;
-                //Play swap animation
-                //makes sure the player doesn't spam
                 evolveCD = 5f;
             }
         }

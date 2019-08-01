@@ -10,6 +10,9 @@ public class BomberStats : MonoBehaviour
     public SceneStuff sceneStuff;
     public Multiplier multiplier;
     private IEnumerator coroutine;
+    public bool isAlive = true;
+    public GameObject respawnPrefab;
+    public GameObject[] respawns;
 
     // Start is called before the first frame update
     void Start()
@@ -23,9 +26,9 @@ public class BomberStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (bomberCurrentHealth <= 0)
+        if (bomberCurrentHealth <= 0 && isAlive)
         {
+            isAlive = false;
             sceneStuff.enemiesKilled += 1;
             multiplier.KillEvent(1000);
             Destroy(gameObject);
@@ -34,7 +37,6 @@ public class BomberStats : MonoBehaviour
         {
             gameObject.GetComponentInChildren<ParticleSystem>().Play();
         }
-
     }
 
     public void Damage(float damage)
@@ -50,5 +52,4 @@ public class BomberStats : MonoBehaviour
         yield return new WaitForSeconds(time);
         gameObject.GetComponent<SpriteRenderer>().material.SetFloat("_FlashAmount", 0);
     }
-
 }
