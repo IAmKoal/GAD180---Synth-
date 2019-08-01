@@ -7,7 +7,7 @@ public class FlightPhysics : MonoBehaviour
     public float forceThrust, maxVelocity = 8, rotationSpeed;
     public Rigidbody2D planeBody;
     public PlayerStats currentState;
-
+    public SpriteRenderer thruster;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +21,7 @@ public class FlightPhysics : MonoBehaviour
     {
         if (currentState.jetPlaneEvolved == false)
         {
+            thruster.enabled = false;
             if (Input.GetKeyUp(KeyCode.W))
             {
                 planeBody.gravityScale = 3;
@@ -36,6 +37,7 @@ public class FlightPhysics : MonoBehaviour
             if (Input.GetKeyUp(KeyCode.W))
             {
                 planeBody.gravityScale = 1.5f;
+                thruster.enabled = false;
             }
             if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.A))
             {
@@ -73,6 +75,7 @@ public class FlightPhysics : MonoBehaviour
             {
                 planeBody.AddForce(transform.right * forceThrust * 2);
                 planeBody.gravityScale = 0.1f;
+                thruster.enabled = true;
             }
 
             if (Input.GetKey(KeyCode.D))

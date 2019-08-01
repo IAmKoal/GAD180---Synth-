@@ -13,10 +13,11 @@ public class HomingMissile : MonoBehaviour
     //GameCamera explosionEffect;
 
     [SerializeField]
-    float thrust = 1;
+    float thrust = 20f;
 
     [SerializeField]
     float rotateSpeed = 200f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,14 +28,11 @@ public class HomingMissile : MonoBehaviour
 
     void FixedUpdate()
     {
-
         Vector2 direction = (Vector2)playerTarget.position - rb.position;
         direction.Normalize();
-        float rotateAmount = Vector3.Cross(direction, transform.up).z;
+        float rotateAmount = Vector3.Cross(direction, transform.right).z;
         rb.angularVelocity = -rotateAmount * rotateSpeed;
-        //rb.velocity = transform.up * thrust;
-
-        rb.AddRelativeForce(Vector3.up * thrust);
+        rb.velocity = transform.right * thrust;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -14,8 +14,7 @@ public class PlayerStats : MonoBehaviour
     public bool ricochetBulUnlocked = false, jetPlaneUnlocked = false, laserUnlocked = false, jetPlaneEvolved = false;
     public PlayerLeveling currentLevel;
     public IEnumerator coroutine;
-    public Sprite jetSprite, planeSprite;
-    public Animator playerAnimator, thrustAnim;
+    public Animator playerAnimator;
 
     // Start is called before the first frame update
     void Start()
@@ -101,6 +100,7 @@ public class PlayerStats : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Z) && nextGrenadeFire <= 0)
             {
+                Debug.Log("Grenade Launched");
                 Instantiate(ricochetBul, ricoBulSpawn.transform.position, ricoBulSpawn.rotation);
                 nextGrenadeFire = 5;
             }
@@ -126,15 +126,6 @@ public class PlayerStats : MonoBehaviour
                 {
                     playerAnimator.SetBool("jetPlaneEvolved", false);
                 }
-            }
-
-            if(Input.GetKey(KeyCode.W))
-            {
-                thrustAnim.SetBool("Moving", true);
-            }
-            else if(Input.GetKeyUp(KeyCode.W))
-            {
-                thrustAnim.SetBool("Moving", false);
             }
         }
 

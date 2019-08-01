@@ -154,5 +154,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTarget: {fileID: 0}
   animator: {fileID: 3667331573112952100}
-  thrust: 1
+  thrust: 200
   rotateSpeed: 200

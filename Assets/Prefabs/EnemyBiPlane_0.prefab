@@ -4897,6 +4897,7 @@ MonoBehaviour:
   spawningEngine: {fileID: 0}
   multiplier: {fileID: 0}
   isAlive: 1
+  dieDieDie: {fileID: 968354918373889426}
 --- !u!114 &8365811658466682257
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ public class EnemyAttackPlaneStats : MonoBehaviour
     public Multiplier multiplier;
     private IEnumerator coroutine;
     public bool isAlive = true;
+    public Animator dieDieDie;
 
     // Start is called before the first frame update
     void Start()
@@ -56,6 +57,7 @@ public class EnemyAttackPlaneStats : MonoBehaviour
     private IEnumerator DeathAnim(float time)
     {
         //animation of plane dying
+        dieDieDie.SetBool("isDead", true);
         gameObject.GetComponent<Rigidbody2D>().angularDrag *= 5;
         yield return new WaitForSeconds(time);
         Destroy(gameObject);
