@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 public class PlayerStats : MonoBehaviour
 {
-    public int playerMaxHealth = 100, playerCurrentHealth, playerPreviousHealth;
+    public float playerMaxHealth = 100, playerCurrentHealth, playerPreviousHealth;
     public SceneStuff sceneStuff;
     public GameObject Shot, ricochetBul;
     public Transform BulletSpawn, ricoBulSpawn;

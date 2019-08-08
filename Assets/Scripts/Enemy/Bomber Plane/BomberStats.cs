@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class BomberStats : MonoBehaviour
 {
+    [SerializeField]
+    float bombCoolDownTime = 5, nextBombDrop = 8;
+    [SerializeField]
+    GameObject bomb, bombSpawnPoint;
 
     public float bomberMaxHealth = 200;
     public float bomberCurrentHealth;
@@ -18,7 +22,8 @@ public class BomberStats : MonoBehaviour
         bomberCurrentHealth = bomberMaxHealth;
         sceneStuff = GameObject.Find("SceneManager").GetComponent<SceneStuff>();
         multiplier = GameObject.Find("Multiplier").GetComponent<Multiplier>();
-        
+        SetBombRate();
+        bombSpawnPoint.GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -35,6 +40,8 @@ public class BomberStats : MonoBehaviour
         {
             gameObject.GetComponentInChildren<ParticleSystem>().Play();
         }
+
+        SpawnBomb();
     }
 
     public void Damage(float damage)
@@ -57,5 +64,23 @@ public class BomberStats : MonoBehaviour
         gameObject.GetComponent<Rigidbody2D>().angularDrag *= 5;
         yield return new WaitForSeconds(time);
         Destroy(gameObject);
+    }
+
+    void SetBombRate()
+    {
+        if (Time.time == 5)
+        {
+            bombCoolDownTime = 0;
+        }
+    }
+
+    void SpawnBomb()
+    {
+        if (Time.time > nextBombDrop)
+        {
+            Instantiate(bomb, bombSpawnPoint.transform.position, bombSpawnPoint.transform.rotation);
+            Debug.Log("Enemy Bombs Incoming!!");
+            nextBombDrop = Time.time + bombCoolDownTime;
+        }
     }
 }
