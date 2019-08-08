@@ -14,13 +14,14 @@ public class PlayerStats : MonoBehaviour
     public bool ricochetBulUnlocked = false, jetPlaneUnlocked = false, laserUnlocked = false, jetPlaneEvolved = false;
     public PlayerLeveling currentLevel;
     public IEnumerator coroutine;
+    public Animator playerAnimator;
 
     // Start is called before the first frame update
     void Start()
     {
         sceneStuff = GameObject.Find("SceneManager").GetComponent<SceneStuff>();
         playerCurrentHealth = playerMaxHealth;
-
+        playerAnimator = gameObject.GetComponent<Animator>();
         StartCoroutine(AddHealth());
     }
 
@@ -99,6 +100,7 @@ public class PlayerStats : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Z) && nextGrenadeFire <= 0)
             {
+                Debug.Log("Grenade Launched");
                 Instantiate(ricochetBul, ricoBulSpawn.transform.position, ricoBulSpawn.rotation);
                 nextGrenadeFire = 5;
             }
@@ -115,7 +117,15 @@ public class PlayerStats : MonoBehaviour
             {
                 //this toggles the plane state
                 jetPlaneEvolved = !jetPlaneEvolved;
-                evolveCD = 5f;
+                evolveCD = 2.5f;
+                if (jetPlaneEvolved)
+                {
+                    playerAnimator.SetBool("jetPlaneEvolved", true);
+                }
+                else
+                {
+                    playerAnimator.SetBool("jetPlaneEvolved", false);
+                }
             }
         }
 

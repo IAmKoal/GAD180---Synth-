@@ -15,7 +15,7 @@ public class BomberPortal : MonoBehaviour
     private void Start()
     {
         spawnBombers = true;
-        bomberSpawningEngine = GameObject.Find("PortalManager").GetComponent<BomberSpawning>();
+        bomberSpawningEngine = GameObject.Find("BomberPortalManager").GetComponent<BomberSpawning>();
         sceneStuff = GameObject.Find("SceneManager").GetComponent<SceneStuff>();
         SpawnEnemyBombers();
         Debug.Log(bomberSpawns.Length);

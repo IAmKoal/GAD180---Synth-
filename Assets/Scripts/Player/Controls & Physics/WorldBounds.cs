@@ -6,6 +6,11 @@ public class WorldBounds : MonoBehaviour
 {
     public Transform planeTransform;
 
+    private void Start()
+    {
+        planeTransform = this.transform;
+    }
+
     private void Update()
     {
         if (planeTransform.position.x <= -5f)

@@ -42,6 +42,10 @@ public class LazerRasor : MonoBehaviour
                 {
                     if (hit.collider.gameObject.tag == "Enemy Bi Plane")
                     {
+                        hit.collider.gameObject.GetComponent<EnemyAttackPlaneStats>().Damage(1000 * Time.deltaTime);
+                    }
+                    if(hit.collider.gameObject.tag == "Enemy Bomber")
+                    {
                         hit.collider.gameObject.GetComponent<EnemyAttackPlaneStats>().Damage(100);
                     }
                 }

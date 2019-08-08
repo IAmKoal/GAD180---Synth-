@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd618edb4892231409f46a5e09d31179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bomberSpawns: []
+  bomberSpawns:
+  - {fileID: 3358175388981339809, guid: 02381d01d2b781941b877ee44c7eafdf, type: 3}
   bomberSpawningEngine: {fileID: 0}
   spawnBombers: 0
   sceneStuff: {fileID: 0}
@@ -26,7 +27,7 @@ PrefabInstance:
     - target: {fileID: 8286427395446009463, guid: 4a4b9d94bb627d14fb552b0a4dde72a3,
         type: 3}
       propertyPath: m_Name
-      value: Bomber Portal
+      value: Bomber Portal Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8286427395446009458, guid: 4a4b9d94bb627d14fb552b0a4dde72a3,
         type: 3}
