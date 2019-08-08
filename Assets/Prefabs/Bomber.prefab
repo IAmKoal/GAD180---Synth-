@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -6997219392453315177}
   - component: {fileID: -4568921165225788580}
   - component: {fileID: -2644933789937691764}
+  - component: {fileID: 3484215738408705662}
   m_Layer: 10
   m_Name: Bomber
   m_TagString: Enemy Bomber
@@ -52,7 +53,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 24c9eea148c80b94eb4f149fc844f3a8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -100,8 +101,6 @@ MonoBehaviour:
   sceneStuff: {fileID: 0}
   multiplier: {fileID: 0}
   isAlive: 1
-  respawnPrefab: {fileID: 0}
-  respawns: []
 --- !u!114 &-6997219392453315177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,3 +161,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9961638, y: 0.16586456}
   m_EdgeRadius: 0
+--- !u!114 &3484215738408705662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3358175388981339809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 905241f70a14dd049a9cb3ef267c6cbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planeTransform: {fileID: 0}

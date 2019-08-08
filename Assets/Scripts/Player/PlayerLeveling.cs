@@ -7,9 +7,13 @@ public class PlayerLeveling : MonoBehaviour
 {
     public int playerCurrentLevel = 1;
     public Scoring score;
-    public int playerCurrentScore;
+    public int playerCurrentScore, toNextLevel;
     public TMP_Text text;
 
+    private void Start()
+    {
+        toNextLevel = 691;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -19,25 +23,12 @@ public class PlayerLeveling : MonoBehaviour
 
     private void IncreasePlayerLevel()
     {
-        if (playerCurrentScore >= 1000 && playerCurrentLevel < 2)
+        if (playerCurrentScore >= toNextLevel)
         {
             playerCurrentLevel += 1;
-        }
-        
-        if (playerCurrentScore >= 2000 && playerCurrentLevel < 3)
-        {
-            playerCurrentLevel += 1;
+            toNextLevel = toNextLevel * 3 + 420;
         }
 
-        if (playerCurrentScore >= 4000 && playerCurrentLevel < 4)
-        {
-            playerCurrentLevel += 1;
-        }
-
-        if (playerCurrentScore >= 6000 && playerCurrentLevel < 5)
-        {
-            playerCurrentLevel += 1;
-        }
         text.text = "Level - " + playerCurrentLevel.ToString();
     }
 }

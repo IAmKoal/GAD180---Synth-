@@ -11,8 +11,6 @@ public class BomberStats : MonoBehaviour
     public Multiplier multiplier;
     private IEnumerator coroutine;
     public bool isAlive = true;
-    public GameObject respawnPrefab;
-    public GameObject[] respawns;
 
     // Start is called before the first frame update
     void Start()

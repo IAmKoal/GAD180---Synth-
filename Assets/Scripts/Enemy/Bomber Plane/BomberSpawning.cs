@@ -8,7 +8,7 @@ public class BomberSpawning : MonoBehaviour
     private Vector3 spawnLocations;
     public float spawnCoolDown;
     public GameObject[] bomberPrefab;
-    public float bomberAmt;
+    public float bomberAmt = 0;
 
 
     // Start is called before the first frame update
