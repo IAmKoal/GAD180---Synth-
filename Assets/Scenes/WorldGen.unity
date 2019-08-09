@@ -1206,7 +1206,7 @@ GameObject:
   - component: {fileID: 352218894}
   m_Layer: 9
   m_Name: DesertSpawns
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5327,12 +5327,13 @@ MonoBehaviour:
   moveSpeed: 0.5
   boatMaxHealth: 100
   boatCurrentHealth: 0
+  missileCooldownTime: 5
+  missileNextFireTime: 10
   sceneStuff: {fileID: 0}
   multiplier: {fileID: 0}
   EnemyMissile: {fileID: 4932195329216646831, guid: 04aab21f1ffeb4e4b85c035950c40ae9,
     type: 3}
   EnemyMissileSpawn: {fileID: 726565846}
-  missileCooldownTime: 5
 --- !u!50 &1918430386
 Rigidbody2D:
   serializedVersion: 4
@@ -5427,10 +5428,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTarget: {fileID: 1400551469}
-  animator: {fileID: 3667331573112952100, guid: 04aab21f1ffeb4e4b85c035950c40ae9,
-    type: 3}
+  explosion: {fileID: 0}
+  rb: {fileID: 0}
+  playerhealth: {fileID: 0}
+  player: {fileID: 0}
   thrust: 1
   rotateSpeed: 200
+  missileDamage: 35
+  timeAlive: 0
+  movementSpeed: 0
+  isAlive: 1
 --- !u!61 &1918430391
 BoxCollider2D:
   m_ObjectHideFlags: 0
