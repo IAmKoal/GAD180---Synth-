@@ -26,7 +26,7 @@ public class PlayerLeveling : MonoBehaviour
         if (playerCurrentScore >= toNextLevel)
         {
             playerCurrentLevel += 1;
-            toNextLevel = toNextLevel * 3 + 420;
+            toNextLevel = toNextLevel * 2 + 420;
         }
 
         text.text = "Level - " + playerCurrentLevel.ToString();

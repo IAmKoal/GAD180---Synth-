@@ -17,7 +17,7 @@ public class SpawningEngine : MonoBehaviour
         spawnCD = 0;
         spawnLocations.z = -3;
         currentLevel = GameObject.Find("Player").GetComponentInChildren<PlayerLeveling>();
-        currentLimit = 5;
+        currentLimit = 6;
     }
 
     // Update is called once per frame
@@ -25,8 +25,10 @@ public class SpawningEngine : MonoBehaviour
     {
         spawnLocations.x = (Random.Range(5, 85));
         spawnLocations.y = (Random.Range(-2, 35));
-
-        currentLimit = 2 + currentLevel.playerCurrentLevel * 3;
+        if (currentLevel.playerCurrentLevel > 4)
+        {
+            currentLimit = 2 + currentLevel.playerCurrentLevel * 2;
+        }
 
         if (enemyAmt <= currentLimit)
         {
