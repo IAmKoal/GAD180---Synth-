@@ -19,7 +19,7 @@ public class Bomb : MonoBehaviour
         bombWeight.angularDrag = 25;
         GetComponent<Rigidbody2D>().velocity = transform.right * speed;
         timeAlive = 5;
-        player = GetComponent<PlayerStats>();
+        player = GameObject.Find("Player").GetComponent<PlayerStats>();
     }
 
     private void Update()
@@ -54,7 +54,7 @@ public class Bomb : MonoBehaviour
         {
             //bombCollider.GetComponent<PlayerStats>();
             player.playerCurrentHealth -= bombDamage;
-            Debug.Log(player.playerCurrentHealth + "player hit by bomb");
+            player.TakeDamage();
             explosion.SetBool("isDead", true);
             Destroy(gameObject);
         }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4032655794232157112}
   - component: {fileID: 3677032256163287294}
   - component: {fileID: 5934552518298072680}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: BombTest
   m_TagString: Bomb
   m_Icon: {fileID: 0}
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   timeAlive: 0
-  bombDamage: 50
+  bombDamage: 15
   torque: 10
   bomber: {fileID: 485116211346412258, guid: 02381d01d2b781941b877ee44c7eafdf, type: 3}
   explosion: {fileID: 5950863806496276360, guid: fee11468abe77dc4b84050584dd25a73,

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3855719911166220293}
   - component: {fileID: 1361308565482869632}
   - component: {fileID: 6906022410512094233}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Missile_0
   m_TagString: Enemy Missile
   m_Icon: {fileID: 0}
@@ -155,11 +155,10 @@ MonoBehaviour:
   playerTarget: {fileID: 0}
   explosion: {fileID: 3667331573112952100}
   rb: {fileID: 1361308565482869632}
-  playerhealth: {fileID: 0}
   player: {fileID: 0}
   thrust: 200
   rotateSpeed: 200
-  missileDamage: 35
+  missileDamage: 10
   timeAlive: 10
   movementSpeed: 15
   isAlive: 1

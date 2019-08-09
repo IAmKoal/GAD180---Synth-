@@ -68,8 +68,7 @@ public class PlayerStats : MonoBehaviour
         {
             int enemyBulDamage = enemyBulCol.gameObject.GetComponent<EnemyBullet>().enemyDamage;
             playerCurrentHealth -= enemyBulDamage;
-            coroutine = DamageIndication(0.1f);
-            StartCoroutine(coroutine);
+            TakeDamage();
         }
     }
 
@@ -79,6 +78,12 @@ public class PlayerStats : MonoBehaviour
         {
             sceneStuff.playerAlive = false;
         }
+    }
+
+    public void TakeDamage()
+    {
+        coroutine = DamageIndication(0.1f);
+        StartCoroutine(coroutine);
     }
 
     private IEnumerator DamageIndication(float time)

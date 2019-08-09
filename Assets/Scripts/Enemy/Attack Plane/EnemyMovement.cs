@@ -6,13 +6,14 @@ public class EnemyMovement : MonoBehaviour
 {
     public GameObject EnemyShot;
     public Transform EnemyBulletSpawn;
-    public float fireRate;
-    private float nextFire;
-
+    public float fireRate, timeToShoot;
+    private float shotCount = 0;
     public GameObject EnemyMissile;
     public Transform EnemyMissileSpawn;
     public float missileCooldownTime = 5;
     private float missileNextFireTime = 10;
+
+    public bool canShoot = true;
 
 
     // Start is called before the first frame update
@@ -27,10 +28,19 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.time > nextFire)
+        if (canShoot)
         {
-            nextFire = Time.time + fireRate;
-            Instantiate(EnemyShot, EnemyBulletSpawn.position, EnemyBulletSpawn.rotation);
+            ShootingBullets();
+        }
+
+        if(timeToShoot > 0 && !canShoot)
+        {
+            timeToShoot -= Time.deltaTime;
+            if(timeToShoot <= 0)
+            {
+                timeToShoot = 0;
+                canShoot = true;
+            }
         }
 
         if ( Time.time > missileNextFireTime)
@@ -40,6 +50,28 @@ public class EnemyMovement : MonoBehaviour
             missileNextFireTime = Time.time + missileCooldownTime;
         }
 
+    }
+
+    public void ShootingBullets()
+    {
+        canShoot = false;
+        if (timeToShoot <= 0)
+        {
+            Instantiate(EnemyShot, EnemyBulletSpawn.position, EnemyBulletSpawn.rotation);
+            StartCoroutine(BulletDelay(0.1f));
+            shotCount++;
+            if (shotCount == 5)
+            {
+                timeToShoot = 2;
+                shotCount = 0;
+            }
+        }
+    }
+
+    private IEnumerator BulletDelay(float time)
+    {
+        yield return new WaitForSeconds(time);
+        ShootingBullets();
     }
 
     private void OnCollisionEnter(Collision collision)

@@ -41,7 +41,6 @@ public class PlayerRicochetBullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        
     }
 
     private void OnTriggerEnter2D(Collider2D enemyCollider)
@@ -56,6 +55,21 @@ public class PlayerRicochetBullet : MonoBehaviour
                     childNumber++;
                     GameObject child = Instantiate(ricochetBul, gameObject.transform.position, Quaternion.Euler(new Vector3(0, 0, currentDegree)));
                     child.GetComponent<PlayerRicochetBullet>().previousEnemy = enemyCollider.gameObject.name;
+                    child.GetComponent<PlayerRicochetBullet>().childNumber = childNumber;
+                    currentDegree += Random.Range(0, 90);
+                }
+                Destroy(gameObject);
+            }
+        }
+        if (enemyCollider.gameObject.tag == "Enemy Bomber")
+        {
+            enemyCollider.GetComponent<BomberStats>().Damage(50);
+            if (childNumber <= 3)
+            {
+                for (int x = 0; x < 4; x++)
+                {
+                    childNumber++;
+                    GameObject child = Instantiate(ricochetBul, gameObject.transform.position, Quaternion.Euler(new Vector3(0, 0, currentDegree)));
                     child.GetComponent<PlayerRicochetBullet>().childNumber = childNumber;
                     currentDegree += Random.Range(0, 90);
                 }
