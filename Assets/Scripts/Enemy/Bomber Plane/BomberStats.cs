@@ -13,6 +13,7 @@ public class BomberStats : MonoBehaviour
     public float bomberCurrentHealth;
     public SceneStuff sceneStuff;
     public Multiplier multiplier;
+    public BomberSpawning bomberPortal;
     private IEnumerator coroutine;
     public bool isAlive = true;
 
@@ -22,6 +23,7 @@ public class BomberStats : MonoBehaviour
         bomberCurrentHealth = bomberMaxHealth;
         sceneStuff = GameObject.Find("SceneManager").GetComponent<SceneStuff>();
         multiplier = GameObject.Find("Multiplier").GetComponent<Multiplier>();
+        bomberPortal = GameObject.Find("BomberPortalManager").GetComponent<BomberSpawning>();
         SetBombRate();
         bombSpawnPoint.GetComponent<Transform>();
     }
@@ -33,6 +35,7 @@ public class BomberStats : MonoBehaviour
         {
             isAlive = false;
             sceneStuff.enemiesKilled += 1;
+            bomberPortal.bomberAmt -= 1;
             multiplier.KillEvent(1000);
             Destroy(gameObject);
         }

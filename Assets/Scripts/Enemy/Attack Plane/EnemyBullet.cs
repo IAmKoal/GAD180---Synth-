@@ -13,4 +13,8 @@ public class EnemyBullet : MonoBehaviour
         GetComponent<Rigidbody2D>().velocity = transform.right * speed;
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(gameObject);
+    }
 }

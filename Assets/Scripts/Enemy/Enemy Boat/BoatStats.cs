@@ -7,11 +7,8 @@ public class BoatStats : MonoBehaviour
 
     public Transform pointA;
     public Transform pointB;
-    public float moveSpeed = 1.0f;
+    public float moveSpeed = 1.0f, boatMaxHealth, boatCurrentHealth, missileCooldownTime, missileNextFireTime;
 
-
-    public float boatMaxHealth;
-    public float boatCurrentHealth;
     public SceneStuff sceneStuff;
     public Multiplier multiplier;
     private IEnumerator coroutine;
@@ -19,9 +16,6 @@ public class BoatStats : MonoBehaviour
 
     public GameObject EnemyMissile;
     public Transform EnemyMissileSpawn;
-    public float missileCooldownTime = 5;
-    private float missileNextFireTime = 10;
-
 
     // Start is called before the first frame update
     void Start()

@@ -6,12 +6,11 @@ public class Bomb : MonoBehaviour
 {
 
     [SerializeField]
-    float speed = 1f, timeAlive, bombDamage = 10f, rotationSpeed = 10f;
+    float speed = 1f, timeAlive, bombDamage = 10, torque = 10;
     public BomberStats bomber;
     public Animator explosion;
     public PlayerStats player;
     public Rigidbody2D bombWeight;
-    public GameObject target;
 
     // Start is called before the first frame update
     void Start()
@@ -19,29 +18,20 @@ public class Bomb : MonoBehaviour
         bombWeight.gravityScale = 5;
         bombWeight.angularDrag = 25;
         GetComponent<Rigidbody2D>().velocity = transform.right * speed;
+        timeAlive = 5;
+        player = GameObject.Find("Player").GetComponent<PlayerStats>();
     }
 
     private void Update()
     {
         TimeAlive();
-
-        Vector3 targetDir = target.transform.position - transform.position;
-
-        // The step size is equal to speed times frame time.
-        float step = speed * Time.deltaTime;
-
-        Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, step, 0.0f);
-        Debug.DrawRay(transform.position, newDir, Color.red);
-
-        // Move our position a step closer to the target.
-        transform.rotation = Quaternion.LookRotation(newDir);
+        bombWeight.AddTorque(torque);
     }
 
     void TimeAlive()
     {
-        timeAlive = 5f;
 
-        if(timeAlive <= 0f)
+        if(timeAlive <= 0)
         {
             explosion.SetBool("isDead", true);
             Destroy(gameObject);
@@ -60,10 +50,18 @@ public class Bomb : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D bombCollider)
     {
-        if(bombCollider.gameObject.tag == "player")
+        if(bombCollider.gameObject.tag == "Player" && bombCollider.gameObject.tag != "Enemy Bomber")
         {
-            bombCollider.GetComponent<PlayerStats>();
+            //bombCollider.GetComponent<PlayerStats>();
             player.playerCurrentHealth -= bombDamage;
+            player.TakeDamage();
+            explosion.SetBool("isDead", true);
+            Destroy(gameObject);
+        }
+        else
+        {
+            explosion.SetBool("isDead", true);
+            Destroy(gameObject);
         }
     }
 }
