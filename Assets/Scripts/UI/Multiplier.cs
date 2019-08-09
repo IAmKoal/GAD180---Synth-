@@ -38,12 +38,12 @@ public class Multiplier : MonoBehaviour
 
     public void KillEvent(int score)
     {
+        scoring.UpdateScore(multiplier * score);
         if (multiplier < 20)
         {
             multiplier += 1;
         }
-        timeToKill = 3;
-        scoring.UpdateScore(multiplier * score);
+        timeToKill = 4;
     }
 
     void UpdatingMulti()

@@ -46,7 +46,7 @@ public class LazerRasor : MonoBehaviour
                     }
                     if(hit.collider.gameObject.tag == "Enemy Bomber")
                     {
-                        hit.collider.gameObject.GetComponent<BomberStats>().Damage(5000 * Time.deltaTime);
+                        hit.collider.gameObject.GetComponent<BomberStats>().Damage(2500 * Time.deltaTime);
                     }
                 }
                 laserRender.enabled = true;
