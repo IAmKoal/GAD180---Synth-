@@ -29,6 +29,7 @@ public class PlayerStats : MonoBehaviour
     void Update()
     {
         playerCurrentLevel = currentLevel.playerCurrentLevel;
+        playerMaxHealth = 50 * playerCurrentLevel + 50;
         switch (playerCurrentLevel)
         {
             case 2:
@@ -50,14 +51,14 @@ public class PlayerStats : MonoBehaviour
     IEnumerator AddHealth()
     {
         while (true)
-            if (playerCurrentHealth < 100)
+            if (playerCurrentHealth < playerMaxHealth)
             {
-                playerCurrentHealth += 4;
+                playerCurrentHealth += 5;
                 yield return new WaitForSeconds(1);
             }
             else
             {
-                playerCurrentHealth = 100;
+                playerCurrentHealth = playerMaxHealth;
                 yield return null;
             }
     }
