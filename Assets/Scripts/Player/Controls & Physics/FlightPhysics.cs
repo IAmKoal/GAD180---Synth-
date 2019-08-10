@@ -26,7 +26,7 @@ public class FlightPhysics : MonoBehaviour
             {
                 planeBody.gravityScale = 3;
             }
-            if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.A))
+            if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.LeftArrow))
             {
                 planeBody.angularDrag = 10;
             }
@@ -39,7 +39,7 @@ public class FlightPhysics : MonoBehaviour
                 planeBody.gravityScale = 1.5f;
                 thruster.enabled = false;
             }
-            if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.A))
+            if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.LeftArrow))
             {
                 planeBody.angularDrag = 15;
             }
