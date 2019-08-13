@@ -6581,6 +6581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8877d3f690448744bb2a8dffef304ec0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerStats: {fileID: 1400551474}
   imageCooldown: {fileID: 1138419183}
   cooldown: 2.5
 --- !u!114 &1097862268
@@ -6595,6 +6596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 931e54fac620c244db31cd806dde805f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerStats: {fileID: 0}
   imageCooldown: {fileID: 1568843180}
   cooldown: 2.5
 --- !u!114 &1097862269
