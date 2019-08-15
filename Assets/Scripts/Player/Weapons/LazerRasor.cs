@@ -24,7 +24,7 @@ public class LazerRasor : MonoBehaviour
     {
         if (playerStats.laserUnlocked == true)
         {
-            if (Input.GetKey(KeyCode.X) && laserLeft > 0 && canShoot == true)
+            if (Input.GetKey(KeyCode.K) && laserLeft > 0 && canShoot == true)
             {
                 RaycastHit2D hit = Physics2D.Raycast(laserPoint.position, transform.right, 20, layerMask);
                 if (hit)
@@ -46,7 +46,7 @@ public class LazerRasor : MonoBehaviour
                     }
                     if(hit.collider.gameObject.tag == "Enemy Bomber")
                     {
-                        hit.collider.gameObject.GetComponent<BomberStats>().Damage(2500 * Time.deltaTime);
+                        hit.collider.gameObject.GetComponent<BomberStats>().Damage(1500 * Time.deltaTime);
                     }
                 }
                 laserRender.enabled = true;

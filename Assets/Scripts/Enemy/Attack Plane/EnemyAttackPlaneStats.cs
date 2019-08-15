@@ -27,12 +27,10 @@ public class EnemyAttackPlaneStats : MonoBehaviour
     {
         if(enemyCurrentHealth <= 0 && isAlive)
         {
-            isAlive = false;
-            spawningEngine.enemyAmt -= 1;
+            Death();
             sceneStuff.enemiesKilled += 1;
             Debug.Log(sceneStuff.enemiesKilled);
             multiplier.KillEvent(50);
-            StartCoroutine(DeathAnim(1));
         }
         if(enemyCurrentHealth <= 51 && enemyCurrentHealth > 0)
         {
@@ -47,6 +45,16 @@ public class EnemyAttackPlaneStats : MonoBehaviour
         enemyCurrentHealth -= damage;
     }
 
+    public void Death()
+    {
+        if (isAlive)
+        {
+            isAlive = false;
+            StartCoroutine(DeathAnim(1));
+            spawningEngine.enemyAmt -= 1;
+        } 
+    }
+
     private IEnumerator DamageIndication(float time)
     {
         gameObject.GetComponent<SpriteRenderer>().material.SetFloat("_FlashAmount", 1);
@@ -58,6 +66,7 @@ public class EnemyAttackPlaneStats : MonoBehaviour
     {
         //animation of plane dying
         dieDieDie.SetBool("isDead", true);
+        gameObject.GetComponentInChildren<AudioSource>().Play();
         gameObject.GetComponent<Rigidbody2D>().angularDrag *= 5;
         yield return new WaitForSeconds(time);
         Destroy(gameObject);

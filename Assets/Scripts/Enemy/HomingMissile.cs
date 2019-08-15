@@ -21,7 +21,7 @@ public class HomingMissile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timeAlive = 2.5f;
+        timeAlive = 2f;
         playerTarget = GameObject.FindGameObjectWithTag("Player").transform;
         player = GameObject.Find("Player").GetComponent<PlayerStats>();
         rb = gameObject.GetComponent<Rigidbody2D>();
@@ -42,7 +42,6 @@ public class HomingMissile : MonoBehaviour
 
     void FixedUpdate()
     {
-
         if(isAlive == true)
         {
             Vector2 direction = (Vector2)playerTarget.position - rb.position;
@@ -57,12 +56,12 @@ public class HomingMissile : MonoBehaviour
     {
         if(missileCollider.gameObject.tag == "Player")
         {
+            explosion.SetBool("Hit", true);
             player.playerCurrentHealth -= missileDamage;
             player.TakeDamage();
             Debug.Log(player.playerCurrentHealth + "player hit by missile");
             rb.velocity = new Vector2(0, 0);
             isAlive = false;
-            explosion.SetBool("Hit", true);
             Destroy(gameObject);
         }
         else

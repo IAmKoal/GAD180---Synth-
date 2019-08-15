@@ -1,17 +1,33 @@
 fileFormatVersion: 2
 guid: 2c26d599a8762294c811d5954e528a84
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: Portal_0
-    21300002: Portal_1
-    21300004: Portal_2
-    21300006: Portal_3
-    21300008: Portal_4
-    21300010: Portal_5
-    21300012: Portal_6
-    21300014: Portal_7
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: Portal_0
+  - first:
+      213: 21300002
+    second: Portal_1
+  - first:
+      213: 21300004
+    second: Portal_2
+  - first:
+      213: 21300006
+    second: Portal_3
+  - first:
+      213: 21300008
+    second: Portal_4
+  - first:
+      213: 21300010
+    second: Portal_5
+  - first:
+      213: 21300012
+    second: Portal_6
+  - first:
+      213: 21300014
+    second: Portal_7
   externalObjects: {}
-  serializedVersion: 9
+  serializedVersion: 10
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -39,7 +55,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -71,7 +87,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -82,7 +98,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -93,7 +109,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -104,7 +120,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -129,6 +145,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 2ad5d055a25d3d0448f9ef32a5136859
+      internalID: 21300000
       vertices: []
       indices: 
       edges: []
@@ -149,6 +166,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 6d37f357c115435488d1623b0308b462
+      internalID: 21300002
       vertices: []
       indices: 
       edges: []
@@ -169,6 +187,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 0b76d4f565068b946a921abd9ca5aa61
+      internalID: 21300004
       vertices: []
       indices: 
       edges: []
@@ -189,6 +208,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 23b27a8e52c9b5947896f5a0c5f2e774
+      internalID: 21300006
       vertices: []
       indices: 
       edges: []
@@ -209,6 +229,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: a32ba3afac4d495479d730741f22b66a
+      internalID: 21300008
       vertices: []
       indices: 
       edges: []
@@ -229,6 +250,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: ea93a7475a44d8642a5195c8df1fe3ad
+      internalID: 21300010
       vertices: []
       indices: 
       edges: []
@@ -249,6 +271,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: e725796cd5d321845a6ac0c1241ed546
+      internalID: 21300012
       vertices: []
       indices: 
       edges: []
@@ -269,6 +292,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: d1b0ce06d01c4a64b96064ddf66bf642
+      internalID: 21300014
       vertices: []
       indices: 
       edges: []
@@ -277,10 +301,12 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 31f5ea11005069f4c8b10af11492d0a8
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
+    secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

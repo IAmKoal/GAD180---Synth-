@@ -4,23 +4,14 @@ using UnityEngine;
 
 public class EnemyGround : MonoBehaviour
 {
-    public GameObject enemy;
+    public EnemyAttackPlaneStats enemy;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Enemy Bi Plane" || collision.tag == "Enemy Bomber")
+        if(collision.tag == "Enemy Bi Plane")
         {
-            enemy = collision.gameObject;
-            StartCoroutine(EnemyDying(1));
+            enemy = collision.gameObject.GetComponent<EnemyAttackPlaneStats>();
+            enemy.Death();
         }
-    }
-
-    private IEnumerator EnemyDying(float time)
-    {
-        Debug.Log("PreDeath");
-        //animation of dying
-        yield return new WaitForSeconds(time);
-        Destroy(enemy);
-        Debug.Log("PostDeath");
     }
 }

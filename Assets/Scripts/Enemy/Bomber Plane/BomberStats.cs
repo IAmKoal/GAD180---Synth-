@@ -33,11 +33,10 @@ public class BomberStats : MonoBehaviour
     {
         if (bomberCurrentHealth <= 0 && isAlive)
         {
-            isAlive = false;
+            Death();
             sceneStuff.enemiesKilled += 1;
-            bomberPortal.bomberAmt -= 1;
-            multiplier.KillEvent(1000);
-            Destroy(gameObject);
+            Debug.Log(sceneStuff.enemiesKilled);
+            multiplier.KillEvent(250);
         }
         if (bomberCurrentHealth <= 51 && bomberCurrentHealth > 0)
         {
@@ -61,10 +60,19 @@ public class BomberStats : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().material.SetFloat("_FlashAmount", 0);
     }
 
+    public void Death()
+    {
+        isAlive = false;
+        StartCoroutine(DeathAnim(1));
+        bomberPortal.bomberAmt -= 1;
+    }
+
     private IEnumerator DeathAnim(float time)
     {
         //animation of plane dying
+        gameObject.GetComponentInChildren<AudioSource>().Play();
         gameObject.GetComponent<Rigidbody2D>().angularDrag *= 5;
+        gameObject.GetComponentInChildren<Animator>().enabled = true;
         yield return new WaitForSeconds(time);
         Destroy(gameObject);
     }

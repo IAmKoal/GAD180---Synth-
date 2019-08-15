@@ -22,11 +22,11 @@ public class FlightPhysics : MonoBehaviour
         if (currentState.jetPlaneEvolved == false)
         {
             thruster.enabled = false;
-            if (Input.GetKeyUp(KeyCode.UpArrow))
+            if (Input.GetKeyUp(KeyCode.W))
             {
                 planeBody.gravityScale = 3;
             }
-            if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.LeftArrow))
+            if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.A))
             {
                 planeBody.angularDrag = 10;
             }
@@ -34,12 +34,12 @@ public class FlightPhysics : MonoBehaviour
         else
         {
             //JET Plane Stalled Behaviour (Slower Descent / Slower turn Speed) 
-            if (Input.GetKeyUp(KeyCode.UpArrow))
+            if (Input.GetKeyUp(KeyCode.W))
             {
                 planeBody.gravityScale = 1.5f;
                 thruster.enabled = false;
             }
-            if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.LeftArrow))
+            if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.A))
             {
                 planeBody.angularDrag = 15;
             }
@@ -50,19 +50,19 @@ public class FlightPhysics : MonoBehaviour
     {
         if (currentState.jetPlaneEvolved == false)
         {
-            if (Input.GetKey(KeyCode.UpArrow))
+            if (Input.GetKey(KeyCode.W))
             {
                 planeBody.AddForce(transform.right * forceThrust);
                 planeBody.gravityScale = 0.25f;
             }
 
-            if (Input.GetKey(KeyCode.RightArrow))
+            if (Input.GetKey(KeyCode.D))
             {
                 planeBody.angularDrag = 20;
                 planeBody.AddTorque(-rotationSpeed);
             }
 
-            if (Input.GetKey(KeyCode.LeftArrow))
+            if (Input.GetKey(KeyCode.A))
             {
                 planeBody.angularDrag = 20;
                 planeBody.AddTorque(rotationSpeed);
@@ -71,20 +71,20 @@ public class FlightPhysics : MonoBehaviour
         else
         {
             //Jet Plane Moving Behaviour(Slower Descent / Slower turn Speed / Super Fast)
-            if (Input.GetKey(KeyCode.UpArrow))
+            if (Input.GetKey(KeyCode.W))
             {
                 planeBody.AddForce(transform.right * forceThrust * 2);
                 planeBody.gravityScale = 0.1f;
                 thruster.enabled = true;
             }
 
-            if (Input.GetKey(KeyCode.RightArrow))
+            if (Input.GetKey(KeyCode.D))
             {
                 planeBody.angularDrag = 20;
                 planeBody.AddTorque(-rotationSpeed / 2);
             }
 
-            if (Input.GetKey(KeyCode.LeftArrow))
+            if (Input.GetKey(KeyCode.A))
             {
                 planeBody.angularDrag = 20;
                 planeBody.AddTorque(rotationSpeed / 2);

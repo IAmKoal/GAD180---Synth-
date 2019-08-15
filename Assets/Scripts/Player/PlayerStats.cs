@@ -104,7 +104,7 @@ public class PlayerStats : MonoBehaviour
 
         if (ricochetBulUnlocked == true)
         {
-            if (Input.GetKeyDown(KeyCode.Z) && nextGrenadeFire <= 0)
+            if (Input.GetKeyDown(KeyCode.M) && nextGrenadeFire <= 0)
             {
                 Debug.Log("Grenade Launched");
                 Instantiate(ricochetBul, ricoBulSpawn.transform.position, ricoBulSpawn.rotation);
