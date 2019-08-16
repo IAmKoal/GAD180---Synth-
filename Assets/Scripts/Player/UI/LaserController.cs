@@ -23,7 +23,7 @@ public class LaserController : MonoBehaviour
         {
             Destroy(imageLocked);
 
-            if (Input.GetKeyDown(KeyCode.X))
+            if (Input.GetKeyDown(KeyCode.K))
             {
                 isCooldown = true;
             }

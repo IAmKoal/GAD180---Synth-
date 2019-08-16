@@ -24,7 +24,7 @@ public class BouncingGrenadeController : MonoBehaviour
         {
             Destroy(imageLocked);
 
-            if (Input.GetKeyDown(KeyCode.Z))
+            if (Input.GetKeyDown(KeyCode.M))
             {
                 isCooldown = true;
             }

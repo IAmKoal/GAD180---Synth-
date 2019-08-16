@@ -6881,7 +6881,7 @@ MonoBehaviour:
   playerStats: {fileID: 1400551474}
   imageCooldown: {fileID: 1568843180}
   imageLocked: {fileID: 400271405}
-  cooldown: 2.5
+  cooldown: 5
 --- !u!114 &1097862269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12741,15 +12741,15 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 14.713201
       objectReference: {fileID: 0}
-    - target: {fileID: 2163482160765952135, guid: 4a4b9d94bb627d14fb552b0a4dde72a3,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8286427395446009461, guid: 4a4b9d94bb627d14fb552b0a4dde72a3,
         type: 3}
       propertyPath: m_FlipX
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2163482160765952135, guid: 4a4b9d94bb627d14fb552b0a4dde72a3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a4b9d94bb627d14fb552b0a4dde72a3, type: 3}

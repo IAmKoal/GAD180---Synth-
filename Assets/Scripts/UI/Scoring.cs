@@ -10,7 +10,7 @@ public class Scoring : MonoBehaviour
     public int scoreLength = 9;
 
     // this is the score
-    public string newScore = "000000000";
+    public static string newScore = "000000000";
     public int totalScore;
 
     // Update is called once per frame
