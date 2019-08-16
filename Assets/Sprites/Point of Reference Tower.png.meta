@@ -1,0 +1,1539 @@
+fileFormatVersion: 2
+guid: 24e1de0dae4127e4391871d663fe0405
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2065261485676962447
+    second: Point of Reference Tower_0
+  - first:
+      213: 655188674135675675
+    second: Point of Reference Tower_1
+  - first:
+      213: 7924863423724852235
+    second: Point of Reference Tower_2
+  - first:
+      213: 1042562356988440513
+    second: Point of Reference Tower_3
+  - first:
+      213: -6728515047378198134
+    second: Point of Reference Tower_4
+  - first:
+      213: -9151543486242548159
+    second: Point of Reference Tower_5
+  - first:
+      213: -3395416356592433924
+    second: Point of Reference Tower_6
+  - first:
+      213: -5218380544107197226
+    second: Point of Reference Tower_7
+  - first:
+      213: 7578362690910206390
+    second: Point of Reference Tower_8
+  - first:
+      213: 3287880994151386094
+    second: Point of Reference Tower_9
+  - first:
+      213: -7762218052288757510
+    second: Point of Reference Tower_10
+  - first:
+      213: -4102467989372978887
+    second: Point of Reference Tower_11
+  - first:
+      213: -2718596654726209313
+    second: Point of Reference Tower_12
+  - first:
+      213: -3399235595656768283
+    second: Point of Reference Tower_13
+  - first:
+      213: 7119136992831529698
+    second: Point of Reference Tower_14
+  - first:
+      213: -4734057656728517434
+    second: Point of Reference Tower_15
+  - first:
+      213: -7560095045048573428
+    second: Point of Reference Tower_16
+  - first:
+      213: 5314608402474866875
+    second: Point of Reference Tower_17
+  - first:
+      213: -5682394026925919540
+    second: Point of Reference Tower_18
+  - first:
+      213: -1227864902006257769
+    second: Point of Reference Tower_19
+  - first:
+      213: -5370712450118094256
+    second: Point of Reference Tower_20
+  - first:
+      213: 7482058019858962050
+    second: Point of Reference Tower_21
+  - first:
+      213: -5886076179605799840
+    second: Point of Reference Tower_22
+  - first:
+      213: 401828356730776275
+    second: Point of Reference Tower_23
+  - first:
+      213: -7662116849822985671
+    second: Point of Reference Tower_24
+  - first:
+      213: -5314289851135949335
+    second: Point of Reference Tower_25
+  - first:
+      213: -7110305545525750959
+    second: Point of Reference Tower_26
+  - first:
+      213: -8167573235663355249
+    second: Point of Reference Tower_27
+  - first:
+      213: 235136286588215234
+    second: Point of Reference Tower_28
+  - first:
+      213: -2626831522879353082
+    second: Point of Reference Tower_29
+  - first:
+      213: 3416636504985961515
+    second: Point of Reference Tower_30
+  - first:
+      213: 5596626474990466118
+    second: Point of Reference Tower_31
+  - first:
+      213: 1702265047386796419
+    second: Point of Reference Tower_32
+  - first:
+      213: 8942203889359459771
+    second: Point of Reference Tower_33
+  - first:
+      213: 351984552169076503
+    second: Point of Reference Tower_34
+  - first:
+      213: 7268539435430420785
+    second: Point of Reference Tower_35
+  - first:
+      213: -5449428007956699272
+    second: Point of Reference Tower_36
+  - first:
+      213: 3857440947991311491
+    second: Point of Reference Tower_37
+  - first:
+      213: -4328601013618442454
+    second: Point of Reference Tower_38
+  - first:
+      213: 6269971659693178214
+    second: Point of Reference Tower_39
+  - first:
+      213: -8846080791934876775
+    second: Point of Reference Tower_40
+  - first:
+      213: 7665155064025735302
+    second: Point of Reference Tower_41
+  - first:
+      213: -5629617396614205975
+    second: Point of Reference Tower_42
+  - first:
+      213: 3213671969398510867
+    second: Point of Reference Tower_43
+  - first:
+      213: -1325446837696583088
+    second: Point of Reference Tower_44
+  - first:
+      213: -673540987799560128
+    second: Point of Reference Tower_45
+  - first:
+      213: -626202850267956129
+    second: Point of Reference Tower_46
+  - first:
+      213: 4285382366484599150
+    second: Point of Reference Tower_47
+  - first:
+      213: -7661264151857138359
+    second: Point of Reference Tower_48
+  - first:
+      213: -5671335269520359454
+    second: Point of Reference Tower_49
+  - first:
+      213: 1307432036880401003
+    second: Point of Reference Tower_50
+  - first:
+      213: -8291248582386394346
+    second: Point of Reference Tower_51
+  - first:
+      213: 1559421063550420124
+    second: Point of Reference Tower_52
+  - first:
+      213: -6697105996909055407
+    second: Point of Reference Tower_53
+  - first:
+      213: -1865397419435362152
+    second: Point of Reference Tower_54
+  - first:
+      213: -2223974748887324236
+    second: Point of Reference Tower_55
+  - first:
+      213: 2059013160202341578
+    second: Point of Reference Tower_56
+  - first:
+      213: 1540255580390717258
+    second: Point of Reference Tower_57
+  - first:
+      213: -4176178237559771610
+    second: Point of Reference Tower_58
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 0
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 4096
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Point of Reference Tower_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 0
+        width: 120
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b02c11d169f3e4a4b8bea561db08b173
+      internalID: -2065261485676962447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_1
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 1
+        width: 120
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e429b8f314ff1ab4294c163ffa47f688
+      internalID: 655188674135675675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_2
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 0
+        width: 119
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e27ac691c76962545a048d589ecc8599
+      internalID: 7924863423724852235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_3
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 0
+        width: 118
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd9c1927d8bcfe249a4384ac9d6abfbe
+      internalID: 1042562356988440513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_4
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 0
+        width: 118
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caa6203deaa3dc646bd857ee44d63c19
+      internalID: -6728515047378198134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_5
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 0
+        width: 119
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d5f5f73b4eb83240b9cfdceef02f1b0
+      internalID: -9151543486242548159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_6
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 0
+        width: 120
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81c4814986b2e6d4ea27e251220e6a42
+      internalID: -3395416356592433924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_7
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 0
+        width: 120
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e46daba097b2c9478d53589e128de30
+      internalID: -5218380544107197226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_8
+      rect:
+        serializedVersion: 2
+        x: 1222
+        y: 0
+        width: 120
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f4289336c9bca94db65605d88580111
+      internalID: 7578362690910206390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_9
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 0
+        width: 118
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b47aacd294b78748b37a01a2c43d69a
+      internalID: 3287880994151386094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_10
+      rect:
+        serializedVersion: 2
+        x: 1525
+        y: 0
+        width: 118
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c5165fab6d0bcd4cacce077a5d20bf7
+      internalID: -7762218052288757510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_11
+      rect:
+        serializedVersion: 2
+        x: 1676
+        y: 0
+        width: 118
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 800a20c264c1fbe43901c0ae55df34b3
+      internalID: -4102467989372978887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_12
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 0
+        width: 119
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cdba7559abc6f54eb1085c6d577449a
+      internalID: -2718596654726209313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_13
+      rect:
+        serializedVersion: 2
+        x: 1977
+        y: 0
+        width: 120
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8743ff25f0659f740866e2710e63da38
+      internalID: -3399235595656768283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_14
+      rect:
+        serializedVersion: 2
+        x: 2128
+        y: 0
+        width: 120
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8ea895280cc75746b81f019bfbdd2ff
+      internalID: 7119136992831529698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_15
+      rect:
+        serializedVersion: 2
+        x: 2279
+        y: 0
+        width: 119
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee2e1371d6d72fb429fdb19334271aeb
+      internalID: -4734057656728517434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_16
+      rect:
+        serializedVersion: 2
+        x: 2431
+        y: 0
+        width: 118
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4c0100b88e5bf74f872bfacea161cf5
+      internalID: -7560095045048573428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_17
+      rect:
+        serializedVersion: 2
+        x: 2582
+        y: 0
+        width: 118
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91a25457bfe762543a6860ea1cb90dbe
+      internalID: 5314608402474866875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_18
+      rect:
+        serializedVersion: 2
+        x: 2733
+        y: 0
+        width: 118
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 235d8a65e72c4984581f51102a02715b
+      internalID: -5682394026925919540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_19
+      rect:
+        serializedVersion: 2
+        x: 2883
+        y: 0
+        width: 120
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b72e09128510f14c806155e466e9abd
+      internalID: -1227864902006257769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_20
+      rect:
+        serializedVersion: 2
+        x: 3034
+        y: 0
+        width: 120
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 600228e12c669f34d82bc19505c64611
+      internalID: -5370712450118094256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_21
+      rect:
+        serializedVersion: 2
+        x: 3185
+        y: 0
+        width: 120
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8acd67b1559fca4d9370f49411dee52
+      internalID: 7482058019858962050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_22
+      rect:
+        serializedVersion: 2
+        x: 3337
+        y: 0
+        width: 118
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b218c5bcd56e6fb4b918b6093192ebfa
+      internalID: -5886076179605799840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_23
+      rect:
+        serializedVersion: 2
+        x: 3488
+        y: 0
+        width: 118
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 432286ae7e4393d49be1cb2dda937fa9
+      internalID: 401828356730776275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_24
+      rect:
+        serializedVersion: 2
+        x: 3639
+        y: 0
+        width: 118
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20e03f65636155345b8df611b09e619e
+      internalID: -7662116849822985671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_25
+      rect:
+        serializedVersion: 2
+        x: 3790
+        y: 0
+        width: 119
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c1af31dff86a9b47a8936f7a0bcf4b7
+      internalID: -5314289851135949335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_26
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 0
+        width: 120
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a20ffa1940ad60442af37ce9581d0447
+      internalID: -7110305545525750959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_27
+      rect:
+        serializedVersion: 2
+        x: 4091
+        y: 0
+        width: 120
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15aa4f202c89866449da81a73a0e4c46
+      internalID: -8167573235663355249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_28
+      rect:
+        serializedVersion: 2
+        x: 4242
+        y: 0
+        width: 119
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0848754b193f43b4db060b577fcb39f8
+      internalID: 235136286588215234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_29
+      rect:
+        serializedVersion: 2
+        x: 4394
+        y: 0
+        width: 118
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d4fbd0a4fcc5324181ac53df4b35e6c
+      internalID: -2626831522879353082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_30
+      rect:
+        serializedVersion: 2
+        x: 4545
+        y: 0
+        width: 118
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfff8804045e5f34793a2ed3812d136b
+      internalID: 3416636504985961515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_31
+      rect:
+        serializedVersion: 2
+        x: 4696
+        y: 0
+        width: 118
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acdffd4824e8b724885d04ee7220d79e
+      internalID: 5596626474990466118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_32
+      rect:
+        serializedVersion: 2
+        x: 4846
+        y: 0
+        width: 120
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eeffd105fd729b4e95c8c4c287952e0
+      internalID: 1702265047386796419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_33
+      rect:
+        serializedVersion: 2
+        x: 4997
+        y: 0
+        width: 120
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b87fae820d61ff64e907a4b4a1170b36
+      internalID: 8942203889359459771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_34
+      rect:
+        serializedVersion: 2
+        x: 5148
+        y: 0
+        width: 120
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce0f3c9099c75d84fa9da5f052143dce
+      internalID: 351984552169076503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_35
+      rect:
+        serializedVersion: 2
+        x: 5300
+        y: 0
+        width: 118
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d689f98983d2e014688eaa12e74376f3
+      internalID: 7268539435430420785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_36
+      rect:
+        serializedVersion: 2
+        x: 5451
+        y: 0
+        width: 118
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f28f4269828a254ca3b314427e45e95
+      internalID: -5449428007956699272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_37
+      rect:
+        serializedVersion: 2
+        x: 5602
+        y: 0
+        width: 118
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40296b28c3a49ae4fa73d9493549b8b4
+      internalID: 3857440947991311491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_38
+      rect:
+        serializedVersion: 2
+        x: 5753
+        y: 0
+        width: 119
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77a46fbe881519746a4c015890bb92a0
+      internalID: -4328601013618442454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_39
+      rect:
+        serializedVersion: 2
+        x: 5903
+        y: 0
+        width: 120
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1050b91f9a9e21542bfb1bb8e6bbcbab
+      internalID: 6269971659693178214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_40
+      rect:
+        serializedVersion: 2
+        x: 6054
+        y: 0
+        width: 120
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f09786ed5b1b4014b8731d021d42156f
+      internalID: -8846080791934876775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_41
+      rect:
+        serializedVersion: 2
+        x: 6205
+        y: 0
+        width: 119
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df29846447204244bb2e09f57fe388ca
+      internalID: 7665155064025735302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_42
+      rect:
+        serializedVersion: 2
+        x: 6357
+        y: 0
+        width: 118
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66b0ddca6e3727943b14bddd852fb291
+      internalID: -5629617396614205975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_43
+      rect:
+        serializedVersion: 2
+        x: 6508
+        y: 0
+        width: 118
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 824b15f29b73e894291af57819b85700
+      internalID: 3213671969398510867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_44
+      rect:
+        serializedVersion: 2
+        x: 6659
+        y: 0
+        width: 118
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c24138a2b0f707847a2781d2942b18ae
+      internalID: -1325446837696583088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_45
+      rect:
+        serializedVersion: 2
+        x: 6809
+        y: 0
+        width: 120
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bedf17f0a7e936b499e7f89d509c40f5
+      internalID: -673540987799560128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_46
+      rect:
+        serializedVersion: 2
+        x: 6960
+        y: 0
+        width: 120
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e8ef6092ff98b648b0f059f87d750d0
+      internalID: -626202850267956129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_47
+      rect:
+        serializedVersion: 2
+        x: 7111
+        y: 0
+        width: 120
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eac6bfdefe806334ba1d759db1a5e39d
+      internalID: 4285382366484599150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_48
+      rect:
+        serializedVersion: 2
+        x: 7262
+        y: 0
+        width: 119
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc03ee6d9ad12784ea5f9a5755fc614e
+      internalID: -7661264151857138359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_49
+      rect:
+        serializedVersion: 2
+        x: 7414
+        y: 0
+        width: 118
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96db24517e00a9441a90f9e0b2ca3b50
+      internalID: -5671335269520359454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_50
+      rect:
+        serializedVersion: 2
+        x: 7565
+        y: 0
+        width: 118
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd82cfb4f1cf3d4429f97a7b9b484299
+      internalID: 1307432036880401003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_51
+      rect:
+        serializedVersion: 2
+        x: 7716
+        y: 0
+        width: 119
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a69e64b94fdb0a43b3455698703d72f
+      internalID: -8291248582386394346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_52
+      rect:
+        serializedVersion: 2
+        x: 7866
+        y: 0
+        width: 120
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c357b10d311ea149a91116915e490bf
+      internalID: 1559421063550420124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_53
+      rect:
+        serializedVersion: 2
+        x: 8017
+        y: 0
+        width: 120
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2c7accb6b757a34399f00d3e3aad95b
+      internalID: -6697105996909055407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_54
+      rect:
+        serializedVersion: 2
+        x: 8168
+        y: 0
+        width: 120
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d8c85fee83dadd408318de123728e66
+      internalID: -1865397419435362152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_55
+      rect:
+        serializedVersion: 2
+        x: 8320
+        y: 0
+        width: 118
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44e51d9e1f39bd145b06813faab3c947
+      internalID: -2223974748887324236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_56
+      rect:
+        serializedVersion: 2
+        x: 8471
+        y: 0
+        width: 118
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6659eb32adb84449ac1f3dafc7f2bcf
+      internalID: 2059013160202341578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_57
+      rect:
+        serializedVersion: 2
+        x: 8622
+        y: 0
+        width: 118
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bf820c98ac50834586d0b28da01458d
+      internalID: 1540255580390717258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Point of Reference Tower_58
+      rect:
+        serializedVersion: 2
+        x: 8772
+        y: 0
+        width: 120
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea6658d05103590448882103b74acb2f
+      internalID: -4176178237559771610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: b3cd291fdefcd98499d64d0c1040740b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
