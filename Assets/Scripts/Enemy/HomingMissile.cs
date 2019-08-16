@@ -10,9 +10,6 @@ public class HomingMissile : MonoBehaviour
     public Rigidbody2D rb;
     public PlayerStats player;
 
-    //[SerializeField]
-    //GameCamera explosionEffect;
-
     [SerializeField]
     float thrust = 30f, rotateSpeed = 200f, missileDamage = 10f, timeAlive, movementSpeed;
     [SerializeField]
@@ -21,7 +18,7 @@ public class HomingMissile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timeAlive = 2f;
+        timeAlive = 4f;
         playerTarget = GameObject.FindGameObjectWithTag("Player").transform;
         player = GameObject.Find("Player").GetComponent<PlayerStats>();
         rb = gameObject.GetComponent<Rigidbody2D>();

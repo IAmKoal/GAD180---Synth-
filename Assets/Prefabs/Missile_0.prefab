@@ -157,7 +157,7 @@ MonoBehaviour:
   rb: {fileID: 1361308565482869632}
   player: {fileID: 0}
   thrust: 200
-  rotateSpeed: 200
+  rotateSpeed: 150
   missileDamage: 10
   timeAlive: 10
   movementSpeed: 15

@@ -951,7 +951,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: High Score
+  m_text: Last Score
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: be6bc3f052e5dd34aaa7739fd26202cb, type: 2}
   m_sharedMaterial: {fileID: 7374504623942418914, guid: be6bc3f052e5dd34aaa7739fd26202cb,
